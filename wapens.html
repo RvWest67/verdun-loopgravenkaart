@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wapens &amp; tactiek – Verdun 1914–1918</title>
+<meta name="description" content="Wapens en tactiek in de Slag om Verdun: artillerie, forten, gas, vlammenwerpers, mijnen, de Voie Sacrée en vliegtuigen.">
+<meta name="theme-color" content="#2c3442">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%A0%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#fffdf7;--ink:#2b2b2b;--accent:#8b5a2b;--bar:#2c3442;--poppy:#3b5bdb}
+*{box-sizing:border-box}
+html.sm{scroll-behavior:smooth}
+html,body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+#top{position:sticky;top:0;z-index:50;background:var(--bar);color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+#bar{display:flex;align-items:center;gap:6px;padding:calc(6px + env(safe-area-inset-top)) 8px 6px}
+#bar h1{font-size:15px;margin:0;flex:1;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#bar h1 small{display:block;font-weight:400;font-size:11px;opacity:.8}
+.tbtn{background:#fff;color:var(--bar);border:0;border-radius:18px;padding:7px 11px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;text-decoration:none;display:inline-block}
+.tbtn.home{padding:7px 9px}
+.row{display:flex;gap:6px;overflow-x:auto;padding:0 8px 7px;scrollbar-width:none}
+.row::-webkit-scrollbar{display:none}
+.ych{flex:0 0 auto;color:#fff;text-decoration:none;font-weight:700;font-size:13px;padding:5px 11px;border-radius:15px;border:1.5px solid rgba(255,255,255,.35)}
+.ych.on{background:var(--poppy);border-color:var(--poppy)}
+main{max-width:720px;margin:0 auto;padding:10px 12px 20px}
+.intro{font-size:14px;line-height:1.5;color:#444;margin:6px 2px}
+details.toc{font-size:13.5px;margin:4px 2px 6px}
+details.toc summary{cursor:pointer;color:var(--accent);font-weight:700}
+details.toc ol{padding-left:22px;line-height:1.6;margin:6px 0}
+details.toc a{color:var(--bar)}
+.grp{scroll-margin-top:96px}
+.grp h2{font-size:21px;color:var(--accent);margin:22px 0 8px;padding:0 2px 4px;border-bottom:2px solid #e4d9c6}
+.st{background:#fff;border:1px solid #e4d9c6;border-left:5px solid #7048e8;border-radius:12px;padding:12px 13px;margin:0 0 14px;box-shadow:0 1px 4px rgba(44,52,66,.08);scroll-margin-top:100px}
+.st h3{margin:0;font-size:18px;color:var(--bar);line-height:1.25}
+.wie{font-size:12.5px;color:#7a6a50;margin:2px 0 6px;font-style:italic}
+.st p{font-size:14.5px;line-height:1.55;margin:6px 0}
+blockquote{margin:10px 0;padding:8px 12px;border-left:3px solid var(--poppy);background:#fbf5ee;font-style:italic;font-size:14px;line-height:1.5;color:#4a3f2c}
+blockquote cite{display:block;font-style:normal;font-size:11.5px;color:#777;margin-top:4px}
+.poem{margin:10px 0;background:#fbf5ee;border-radius:10px;padding:8px 12px}
+.poem summary{cursor:pointer;font-weight:700;color:var(--poppy);font-size:14px}
+.poem .cols{display:grid;grid-template-columns:1fr;gap:6px 22px}
+@media(min-width:620px){.poem .cols{grid-template-columns:1fr 1fr}}
+.poem h4{margin:10px 0 2px;font-size:15px;color:var(--bar)}
+.poem p{font-family:Georgia,"Times New Roman",serif;font-size:14.5px;line-height:1.5;margin:6px 0}
+.poem .pc{font-size:11.5px;color:#777}
+.leg{font-size:13px;background:#fff4e6;border-left:3px solid #f08c00;padding:6px 9px;margin:10px 0 0;line-height:1.45}
+.links{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.lk{font-size:12.5px;text-decoration:none;background:#f3e6d6;color:var(--bar);border-radius:12px;padding:5px 10px;font-weight:600}
+.lk.tl{background:#ece5fd}.lk.sim{background:#fde4e1}
+details.src{margin-top:8px;font-size:12px;color:#666}
+details.src summary{cursor:pointer}
+details.src ul{margin:4px 0;padding-left:18px;line-height:1.5}
+details.src a{color:var(--accent)}
+.st.flash{animation:flash 2.2s ease-out}
+@keyframes flash{0%{box-shadow:0 0 0 4px #7048e8}100%{box-shadow:0 1px 4px rgba(44,52,66,.08)}}
+.fotos{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 6px}
+.ft{margin:0;flex:1 1 130px;max-width:170px;min-width:120px;background:#fbf5ee;border-radius:10px;padding:5px;display:flex;flex-direction:column}
+.ft.gr{flex:1 1 170px;max-width:300px}
+.ft.gr img{max-height:250px;object-fit:cover}
+.ft img{display:block;width:100%;height:auto;border-radius:7px;background:#ece5d8}
+.ft.po img{max-height:220px;object-fit:cover;object-position:top}
+.ft figcaption{font-size:12px;line-height:1.35;color:#4a3f2c;margin:4px 2px 0}
+.ft .cr{display:block;font-size:10.5px;color:#888;margin-top:2px}
+.ft .cr a{color:#888}
+.fotonote{font-size:11.5px;color:#888;margin:0 0 4px}
+.note{font-size:12.5px;color:#666;line-height:1.5}
+footer{text-align:center;font-size:12px;color:#777;padding:10px 16px calc(24px + env(safe-area-inset-bottom))}
+footer a{color:var(--accent)}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.st.flash{animation:none}}
+.tg{display:inline-block;font-size:11px;font-weight:800;border-radius:999px;padding:1px 7px;white-space:nowrap;vertical-align:middle}.tg.lg{background:#f3e3f7;color:#6a1b7a}.tg.om{background:#fff1d6;color:#8a5300}
+.ref{font-size:11px;vertical-align:super;line-height:0;text-decoration:none;color:var(--accent);font-weight:700}
+ol.bronnen{font-size:12.5px;line-height:1.5;padding-left:22px;color:#555}ol.bronnen a{color:var(--accent);word-break:break-word}ol.bronnen li{scroll-margin-top:90px}
+.ev{display:grid;grid-template-columns:92px 1fr;gap:4px 10px;padding:9px 0;border-bottom:1px solid #eee5d6;scroll-margin-top:100px}.ev .d{font-weight:800;color:var(--accent);font-size:13px;line-height:1.3}.ev h3{margin:0 0 2px;font-size:15.5px;color:var(--bar)}.ev p{margin:2px 0;font-size:14px;line-height:1.5}
+.box{background:#fff;border:1px solid #e4d9c6;border-left:5px solid var(--accent);border-radius:12px;padding:11px 13px;margin:0 0 12px}
+.box h3{margin:0 0 4px;font-size:17px;color:var(--bar)}.box p,.box li{font-size:14.5px;line-height:1.55}.box p{margin:6px 0}
+.warn{background:#fff5f5;border-left-color:#c92a2a}
+dl.terms dt{font-weight:800;color:var(--bar);margin-top:10px;font-size:15px;scroll-margin-top:100px}dl.terms dd{margin:2px 0 0 0;font-size:14px;line-height:1.5}
+table.t{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0}table.t td,table.t th{border-bottom:1px solid #e4d9c6;padding:5px 4px;text-align:left;vertical-align:top}table.t th{color:var(--accent)}
+.lk.kaart{background:#e7f1fb}
+.st{border-left-color:#3b5bdb}
+
+</style>
+<!--pwa-->
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Verdun 14–18"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style>#offtoast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(12px + env(safe-area-inset-bottom));z-index:2000;max-width:min(92vw,520px);background:#212529;color:#fff;font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;border-radius:12px;padding:9px 34px 9px 12px;box-shadow:0 3px 12px rgba(0,0,0,.35)}#offtoast button{position:absolute;right:6px;top:5px;background:none;border:0;color:#fff;font-size:18px;cursor:pointer}</style>
+<script>
+(function(){
+  if('serviceWorker' in navigator && (location.protocol==='https:'||/^(localhost|127\.0\.0\.1)$/.test(location.hostname))) addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+  function toast(on){ let t=document.getElementById('offtoast');
+    if(!on){ if(t) t.remove(); return; } if(t||!document.body) return;
+    t=document.createElement('div'); t.id='offtoast'; t.setAttribute('role','status');
+    t.innerHTML='📴 <b>Offline</b>: je bekijkt de bewaarde versie.'+(document.getElementById('map')||window.L?' Kaarttegels die je eerder bekeek, blijven zichtbaar; de luchtfoto heeft internet nodig.':'')+'<button type="button" aria-label="Sluiten">×</button>';
+    t.querySelector('button').onclick=()=>t.remove(); document.body.appendChild(t); }
+  addEventListener('offline',()=>toast(true)); addEventListener('online',()=>toast(false));
+  document.addEventListener('DOMContentLoaded',()=>{ if(navigator.onLine===false) toast(true); });
+})();
+</script>
+<!--/pwa-->
+</head>
+<body>
+<div id="top"><div id="bar"><a class="tbtn home" href="index.html" aria-label="Home / menu">🏠</a><h1>Wapens &amp; tactiek<small>Geschut, forten, gas, mijnen</small></h1><a class="tbtn" href="kaart.html">🗺 Kaart</a></div><nav class="row" aria-label="Snel naar"><a class="ych" href="#artillerie">Artillerie</a><a class="ych" href="#forten">Forten</a><a class="ych" href="#gas">Gas</a><a class="ych" href="#vlam">Vlammenwerpers en stoottroepen</a><a class="ych" href="#mijnen">Mijnen</a><a class="ych" href="#voie">Voie Sacrée en noria</a><a class="ych" href="#lucht">Vliegtuigen</a></nav></div>
+<main>
+<p class="intro">Hoe werd er bij Verdun gevochten? Getallen met ≈ zijn schattingen; cijfers tussen haken verwijzen naar de bronnen.</p>
+<section class="grp" id="artillerie"><h2>💥 Artillerie</h2>
+<div class="box"><h3>De slag van het geschut</h3>
+<p>Verdun was vooral een slag van de artillerie: verreweg de meeste doden en gewonden vielen door granaten. Op 21 februari 1916 stonden er aan Duitse kant ≈ 1.200 stukken geschut klaar, waaronder zware mortieren van 305 en 420 mm. Volgens vaak genoemde schattingen vielen er op de eerste dag ≈ 1 miljoen granaten. <span class="tg om">⚖️ Omstreden</span> Hoe groot dat aantal echt was, verschilt per bron. <a class="ref" href="#bron-1">[1]</a></p>
+<p>De Franse veldkanon van 75 mm (‘le 75’) kon heel snel vuren, maar had weinig vernietigingskracht tegen bunkers. Voor de herovering van Douaumont in oktober 1916 zette het Franse leger twee spoorweghouwitsers van 400 mm in. Hun granaten sloegen door het beton van het fort. <a class="ref" href="#bron-10">[10]</a><a class="ref" href="#bron-11">[11]</a><a class="ref" href="#bron-3">[3]</a></p>
+<p>Het hele slagveld werd zo vaak omgeploegd dat dorpen, bossen en wegen verdwenen. Nog steeds worden er elk jaar tonnen blindgangers gevonden. <a class="ref" href="#bron-12">[12]</a> <a class="lk sim" href="simulatie.html#gericht">▶ In de simulatie</a></p></div>
+</section>
+<section class="grp" id="forten"><h2>🏰 Forten</h2>
+<div class="box"><h3>Een ring van forten</h3>
+<p>Na de nederlaag van 1870 bouwde Frankrijk onder generaal Séré de Rivières een ring van forten rond Verdun. Na 1885 kwamen er beton en draaibare stalen geschutskoepels bij. Douaumont was het grootste en hoogste fort. <a class="ref" href="#bron-2">[2]</a></p>
+<p>In 1915 haalde het leger veel geschut uit de forten, omdat de Belgische forten in 1914 snel waren gevallen. Daardoor kon Douaumont op 25 februari 1916 bijna zonder gevecht worden ingenomen. Later bleken de forten juist goede schuilplaatsen: ze doorstonden zware beschietingen. <a class="ref" href="#bron-3">[3]</a><a class="ref" href="#bron-1">[1]</a> <a class="lk kaart" href="kaart.html#p=douaumont">🗺 Op de kaart</a></p><div class="fotos"><figure class="ft gr"><img src="img/vaux1920.svg" alt="Kapotte geschutskoepel van Fort de Vaux, 1920" width="360" height="267" loading="lazy"><figcaption>Fort de Vaux in 1920: de kapotte geschutskoepel, met Douaumont op de achtergrond (autochroom, kleurenfoto)<span class="cr">Foto: Chevalier Georges, 19 September 1920 (Archives de la Planète, Musée Albert-Kahn) · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:France,_Fort_de_Vaux,_La_Coupole_d%C3%A9truite_par_le_Commandant_Raynal_et_le_fort_de_Douaumont_-_A23819.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span></figcaption></figure></div></div>
+</section>
+<section class="grp" id="gas"><h2>☠️ Gas</h2>
+<div class="box warn"><h3>Groenkruis (difosgeen)</h3>
+<p>In de nacht van 22 op 23 juni 1916 beschoot het Duitse leger de Franse artillerie met ≈ 100.000 gasgranaten met een groen kruis: difosgeen, een longgas. Het aantal is een schatting. Het gas trok in de dalen en schakelde veel Franse batterijen uit. Toch hielden de Franse linies bij Froideterre en Souville stand. <a class="ref" href="#bron-4">[4]</a><a class="ref" href="#bron-1">[1]</a> <a class="lk sim" href="simulatie.html#groenkruis">▶ In de simulatie</a></p>
+<p>De Fransen gebruikten sinds begin 1916 zelf fosgeengranaten. Met betere gasmaskers werd het gas minder dodelijk, maar het bleef de soldaten uitputten. <a class="ref" href="#bron-1">[1]</a></p></div>
+</section>
+<section class="grp" id="vlam"><h2>🔥 Vlammenwerpers en stoottroepen</h2>
+<div class="box"><h3>Nieuwe manieren van aanvallen</h3>
+<p>Al op 26 februari 1915 gebruikte het Duitse leger bij Malancourt, ten noordwesten van Verdun, vlammenwerpers tegen Franse loopgraven. Vanaf 1916 hoorden ze bij de aanvallen van de stoottroepen. <a class="ref" href="#bron-5">[5]</a></p>
+<p>Stoottroepen (Sturmtruppen) vielen in kleine groepen aan met handgranaten, lichte mitrailleurs en vlammenwerpers. Ze zochten zwakke plekken in plaats van in rijen vooruit te lopen. Het Sturmbataillon Rohr oefende die werkwijze en gebruikte haar ook bij Verdun. <a class="ref" href="#bron-8">[8]</a></p></div>
+</section>
+<section class="grp" id="mijnen"><h2>⛏️ Mijnen</h2>
+<div class="box"><h3>Onder de grond: Vauquois en Les Éparges</h3>
+<p>Op de Butte de Vauquois groeven Fransen en Duitsers van 1915 tot 1918 tunnels onder elkaars stellingen. Er waren ≈ 519 ontploffingen. De grootste Duitse mijn, op 14 mei 1916, bevatte ≈ 60 ton explosieven en doodde 108 Franse soldaten. Van het dorp bleef een rij kraters over. <a class="ref" href="#bron-6">[6]</a> <a class="lk kaart" href="kaart.html#p=vauquois">🗺 Op de kaart</a></p>
+<p>Ook op de kam van Les Éparges werden in 1915 mijnen gebruikt. De kraters zijn er nog. <a class="lk sim" href="simulatie.html#mijnen1915">▶ In de simulatie</a> <a class="lk kaart" href="kaart.html#p=eparges">🗺 Op de kaart</a></p></div>
+</section>
+<section class="grp" id="voie"><h2>🚚 Voie Sacrée en noria</h2>
+<div class="box"><h3>De slagader van Verdun</h3>
+<p>Met de Duitse beschietingen was het spoor naar Verdun bijna onbruikbaar. Alleen de smalle weg van Bar-le-Duc (≈ 75 km) bleef over. Daarover reden dag en nacht vrachtwagens, op het drukst ≈ elke 14 seconden één. Per week gingen er ≈ 90.000 man en ≈ 50.000 ton materieel naar het front. Territoriale soldaten gooiden de hele tijd steen onder de wielen om de weg heel te houden. De schrijver Maurice Barrès noemde haar de ‘Voie Sacrée’, de heilige weg. <a class="ref" href="#bron-7">[7]</a> <a class="lk kaart" href="kaart.html#p=voiesacree">🗺 Op de kaart</a></p>
+<p>Pétain liet de divisies na korte tijd aflossen: de ‘noria’, naar het schepwiel. Daardoor vocht een groot deel van het Franse leger (≈ 70 divisies) een tijd bij Verdun. <a class="ref" href="#bron-1">[1]</a></p></div>
+</section>
+<section class="grp" id="lucht"><h2>✈️ Vliegtuigen</h2>
+<div class="box"><h3>Strijd om het luchtruim</h3>
+<p>Bij Verdun ging het voor het eerst echt om wie het luchtruim beheerste. In het begin domineerden de Duitse Fokker-eendekkers. Frankrijk bracht daarop zijn jachtvliegers samen in grote eskaders met Nieuport-toestellen. In mei 1916 kwam ook de Escadrille Lafayette, met Amerikaanse vrijwilligers, naar Verdun. Vliegtuigen en ballonnen waren vooral belangrijk om het artillerievuur te sturen. <a class="ref" href="#bron-1">[1]</a> <a class="ref" href="#bron-9">[9]</a></p></div>
+</section>
+<section class="grp" id="bronnen"><h2>Bronnen</h2><ol class="bronnen"><li id="bron-1">Wikipedia (en), Battle of Verdun – <a href="https://en.wikipedia.org/wiki/Battle_of_Verdun" target="_blank" rel="noopener">en.wikipedia.org/wiki/Battle_of_Verdun</a></li><li id="bron-2">Wikipedia (fr), Système Séré de Rivières – <a href="https://fr.wikipedia.org/wiki/Syst%C3%A8me_S%C3%A9r%C3%A9_de_Rivi%C3%A8res" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Syst%C3%A8me_S%C3%A9r%C3%A9_de_Rivi%C3%A8res</a></li><li id="bron-3">Wikipedia (fr), Fort de Douaumont – <a href="https://fr.wikipedia.org/wiki/Fort_de_Douaumont" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Fort_de_Douaumont</a></li><li id="bron-4">Wikipedia (en), Diphosgene – <a href="https://en.wikipedia.org/wiki/Diphosgene" target="_blank" rel="noopener">en.wikipedia.org/wiki/Diphosgene</a></li><li id="bron-5">Wikipedia (en), Flamethrower – <a href="https://en.wikipedia.org/wiki/Flamethrower" target="_blank" rel="noopener">en.wikipedia.org/wiki/Flamethrower</a></li><li id="bron-6">Wikipedia (fr), Butte de Vauquois – <a href="https://fr.wikipedia.org/wiki/Butte_de_Vauquois" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Butte_de_Vauquois</a></li><li id="bron-7">Wikipedia (fr), Voie sacrée – <a href="https://fr.wikipedia.org/wiki/Voie_sacr%C3%A9e" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Voie_sacr%C3%A9e</a></li><li id="bron-8">Wikipedia (en), Stormtrooper – <a href="https://en.wikipedia.org/wiki/Stormtrooper" target="_blank" rel="noopener">en.wikipedia.org/wiki/Stormtrooper</a></li><li id="bron-9">Wikipedia (en), Lafayette Escadrille – <a href="https://en.wikipedia.org/wiki/Lafayette_Escadrille" target="_blank" rel="noopener">en.wikipedia.org/wiki/Lafayette_Escadrille</a></li><li id="bron-10">Wikipedia (en), Obusier de 400 Modèle 1915/1916 – <a href="https://en.wikipedia.org/wiki/Obusier_de_400_Mod%C3%A8le_1915/1916" target="_blank" rel="noopener">en.wikipedia.org/wiki/Obusier_de_400_Mod%C3%A8le_1915/1916</a></li><li id="bron-11">Wikipedia (en), Canon de 75 modèle 1897 – <a href="https://en.wikipedia.org/wiki/Canon_de_75_mod%C3%A8le_1897" target="_blank" rel="noopener">en.wikipedia.org/wiki/Canon_de_75_mod%C3%A8le_1897</a></li><li id="bron-12">Wikipedia (en), Zone rouge – <a href="https://en.wikipedia.org/wiki/Zone_rouge" target="_blank" rel="noopener">en.wikipedia.org/wiki/Zone_rouge</a></li></ol></section>
+</main>
+<footer>Verdun 14–18 · bezoekersgids · <a href="index.html">menu</a> · <a href="https://github.com/RvWest67/verdun-loopgravenkaart#readme">bronnen en licenties</a></footer>
+
+</body>
+</html>

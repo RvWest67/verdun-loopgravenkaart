@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tijdlijn Verdun 1914–1918</title>
+<meta name="description" content="Tijdlijn van de gevechten rond Verdun, 1914–1918, met bronnen.">
+<meta name="theme-color" content="#2c3442">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%A0%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#fffdf7;--ink:#2b2b2b;--accent:#8b5a2b;--bar:#2c3442;--poppy:#3b5bdb}
+*{box-sizing:border-box}
+html.sm{scroll-behavior:smooth}
+html,body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+#top{position:sticky;top:0;z-index:50;background:var(--bar);color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+#bar{display:flex;align-items:center;gap:6px;padding:calc(6px + env(safe-area-inset-top)) 8px 6px}
+#bar h1{font-size:15px;margin:0;flex:1;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#bar h1 small{display:block;font-weight:400;font-size:11px;opacity:.8}
+.tbtn{background:#fff;color:var(--bar);border:0;border-radius:18px;padding:7px 11px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;text-decoration:none;display:inline-block}
+.tbtn.home{padding:7px 9px}
+.row{display:flex;gap:6px;overflow-x:auto;padding:0 8px 7px;scrollbar-width:none}
+.row::-webkit-scrollbar{display:none}
+.ych{flex:0 0 auto;color:#fff;text-decoration:none;font-weight:700;font-size:13px;padding:5px 11px;border-radius:15px;border:1.5px solid rgba(255,255,255,.35)}
+.ych.on{background:var(--poppy);border-color:var(--poppy)}
+main{max-width:720px;margin:0 auto;padding:10px 12px 20px}
+.intro{font-size:14px;line-height:1.5;color:#444;margin:6px 2px}
+details.toc{font-size:13.5px;margin:4px 2px 6px}
+details.toc summary{cursor:pointer;color:var(--accent);font-weight:700}
+details.toc ol{padding-left:22px;line-height:1.6;margin:6px 0}
+details.toc a{color:var(--bar)}
+.grp{scroll-margin-top:96px}
+.grp h2{font-size:21px;color:var(--accent);margin:22px 0 8px;padding:0 2px 4px;border-bottom:2px solid #e4d9c6}
+.st{background:#fff;border:1px solid #e4d9c6;border-left:5px solid #7048e8;border-radius:12px;padding:12px 13px;margin:0 0 14px;box-shadow:0 1px 4px rgba(44,52,66,.08);scroll-margin-top:100px}
+.st h3{margin:0;font-size:18px;color:var(--bar);line-height:1.25}
+.wie{font-size:12.5px;color:#7a6a50;margin:2px 0 6px;font-style:italic}
+.st p{font-size:14.5px;line-height:1.55;margin:6px 0}
+blockquote{margin:10px 0;padding:8px 12px;border-left:3px solid var(--poppy);background:#fbf5ee;font-style:italic;font-size:14px;line-height:1.5;color:#4a3f2c}
+blockquote cite{display:block;font-style:normal;font-size:11.5px;color:#777;margin-top:4px}
+.poem{margin:10px 0;background:#fbf5ee;border-radius:10px;padding:8px 12px}
+.poem summary{cursor:pointer;font-weight:700;color:var(--poppy);font-size:14px}
+.poem .cols{display:grid;grid-template-columns:1fr;gap:6px 22px}
+@media(min-width:620px){.poem .cols{grid-template-columns:1fr 1fr}}
+.poem h4{margin:10px 0 2px;font-size:15px;color:var(--bar)}
+.poem p{font-family:Georgia,"Times New Roman",serif;font-size:14.5px;line-height:1.5;margin:6px 0}
+.poem .pc{font-size:11.5px;color:#777}
+.leg{font-size:13px;background:#fff4e6;border-left:3px solid #f08c00;padding:6px 9px;margin:10px 0 0;line-height:1.45}
+.links{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.lk{font-size:12.5px;text-decoration:none;background:#f3e6d6;color:var(--bar);border-radius:12px;padding:5px 10px;font-weight:600}
+.lk.tl{background:#ece5fd}.lk.sim{background:#fde4e1}
+details.src{margin-top:8px;font-size:12px;color:#666}
+details.src summary{cursor:pointer}
+details.src ul{margin:4px 0;padding-left:18px;line-height:1.5}
+details.src a{color:var(--accent)}
+.st.flash{animation:flash 2.2s ease-out}
+@keyframes flash{0%{box-shadow:0 0 0 4px #7048e8}100%{box-shadow:0 1px 4px rgba(44,52,66,.08)}}
+.fotos{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 6px}
+.ft{margin:0;flex:1 1 130px;max-width:170px;min-width:120px;background:#fbf5ee;border-radius:10px;padding:5px;display:flex;flex-direction:column}
+.ft.gr{flex:1 1 170px;max-width:300px}
+.ft.gr img{max-height:250px;object-fit:cover}
+.ft img{display:block;width:100%;height:auto;border-radius:7px;background:#ece5d8}
+.ft.po img{max-height:220px;object-fit:cover;object-position:top}
+.ft figcaption{font-size:12px;line-height:1.35;color:#4a3f2c;margin:4px 2px 0}
+.ft .cr{display:block;font-size:10.5px;color:#888;margin-top:2px}
+.ft .cr a{color:#888}
+.fotonote{font-size:11.5px;color:#888;margin:0 0 4px}
+.note{font-size:12.5px;color:#666;line-height:1.5}
+footer{text-align:center;font-size:12px;color:#777;padding:10px 16px calc(24px + env(safe-area-inset-bottom))}
+footer a{color:var(--accent)}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.st.flash{animation:none}}
+.tg{display:inline-block;font-size:11px;font-weight:800;border-radius:999px;padding:1px 7px;white-space:nowrap;vertical-align:middle}.tg.lg{background:#f3e3f7;color:#6a1b7a}.tg.om{background:#fff1d6;color:#8a5300}
+.ref{font-size:11px;vertical-align:super;line-height:0;text-decoration:none;color:var(--accent);font-weight:700}
+ol.bronnen{font-size:12.5px;line-height:1.5;padding-left:22px;color:#555}ol.bronnen a{color:var(--accent);word-break:break-word}ol.bronnen li{scroll-margin-top:90px}
+.ev{display:grid;grid-template-columns:92px 1fr;gap:4px 10px;padding:9px 0;border-bottom:1px solid #eee5d6;scroll-margin-top:100px}.ev .d{font-weight:800;color:var(--accent);font-size:13px;line-height:1.3}.ev h3{margin:0 0 2px;font-size:15.5px;color:var(--bar)}.ev p{margin:2px 0;font-size:14px;line-height:1.5}
+.box{background:#fff;border:1px solid #e4d9c6;border-left:5px solid var(--accent);border-radius:12px;padding:11px 13px;margin:0 0 12px}
+.box h3{margin:0 0 4px;font-size:17px;color:var(--bar)}.box p,.box li{font-size:14.5px;line-height:1.55}.box p{margin:6px 0}
+.warn{background:#fff5f5;border-left-color:#c92a2a}
+dl.terms dt{font-weight:800;color:var(--bar);margin-top:10px;font-size:15px;scroll-margin-top:100px}dl.terms dd{margin:2px 0 0 0;font-size:14px;line-height:1.5}
+table.t{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0}table.t td,table.t th{border-bottom:1px solid #e4d9c6;padding:5px 4px;text-align:left;vertical-align:top}table.t th{color:var(--accent)}
+.lk.kaart{background:#e7f1fb}
+.st{border-left-color:#3b5bdb}
+
+</style>
+<!--pwa-->
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Verdun 14–18"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style>#offtoast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(12px + env(safe-area-inset-bottom));z-index:2000;max-width:min(92vw,520px);background:#212529;color:#fff;font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;border-radius:12px;padding:9px 34px 9px 12px;box-shadow:0 3px 12px rgba(0,0,0,.35)}#offtoast button{position:absolute;right:6px;top:5px;background:none;border:0;color:#fff;font-size:18px;cursor:pointer}</style>
+<script>
+(function(){
+  if('serviceWorker' in navigator && (location.protocol==='https:'||/^(localhost|127\.0\.0\.1)$/.test(location.hostname))) addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+  function toast(on){ let t=document.getElementById('offtoast');
+    if(!on){ if(t) t.remove(); return; } if(t||!document.body) return;
+    t=document.createElement('div'); t.id='offtoast'; t.setAttribute('role','status');
+    t.innerHTML='📴 <b>Offline</b>: je bekijkt de bewaarde versie.'+(document.getElementById('map')||window.L?' Kaarttegels die je eerder bekeek, blijven zichtbaar; de luchtfoto heeft internet nodig.':'')+'<button type="button" aria-label="Sluiten">×</button>';
+    t.querySelector('button').onclick=()=>t.remove(); document.body.appendChild(t); }
+  addEventListener('offline',()=>toast(true)); addEventListener('online',()=>toast(false));
+  document.addEventListener('DOMContentLoaded',()=>{ if(navigator.onLine===false) toast(true); });
+})();
+</script>
+<!--/pwa-->
+</head>
+<body>
+<div id="top"><div id="bar"><a class="tbtn home" href="index.html" aria-label="Home / menu">🏠</a><h1>Tijdlijn<small>Verdun 1914–1918 en daarna</small></h1><a class="tbtn" href="kaart.html">🗺 Kaart</a></div><nav class="row" aria-label="Snel naar"><a class="ych" href="#j1914">1914</a><a class="ych" href="#j1915">1915</a><a class="ych" href="#j1916">1916</a><a class="ych" href="#j1917">1917</a><a class="ych" href="#j1918">1918</a><a class="ych" href="#jna1918">na 1918</a></nav></div>
+<main>
+<p class="intro">De belangrijkste momenten rond Verdun, van 1914 tot de herdenkingen van nu. De cijfers tussen haken verwijzen naar de bronnen onderaan. Getallen met ≈ zijn schattingen.</p>
+<section class="grp" id="j1914"><h2>1914</h2>
+<div class="ev" id="e-1914-08-24"><div class="d">24 aug. 1914</div><div><h3>Verdun in de frontlinie</h3><p>De Duitse legers trekken door België en Noord-Frankrijk. Verdun, met zijn gordel van forten, blijft aan de oostkant van het Franse front de spil. <a class="ref" href="#bron-1">[1]</a></p></div></div>
+<div class="ev" id="e-1914-09-24"><div class="d">24 sept. 1914</div><div><h3>Saint-Mihiel valt: de boog ontstaat</h3><p>Na de Marne nemen Duitse troepen Saint-Mihiel aan de Maas in. De ‘boog van Saint-Mihiel’ snijdt de spoorlijn naar Verdun af en blijft tot september 1918. <a class="ref" href="#bron-1">[1]</a><a class="ref" href="#bron-3">[3]</a></p><div class="links"><a class="lk sim" href="simulatie.html#sept1914">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=montsec">🗺 Op de kaart</a></div></div></div>
+
+</section>
+<section class="grp" id="j1915"><h2>1915</h2>
+<div class="ev" id="e-1915-02-17"><div class="d">17 feb. – apr. 1915</div><div><h3>Gevechten om Les Éparges</h3><p>Maandenlange aanvallen en mijnen op de kam van Les Éparges. Maurice Genevoix raakt er gewond; zijn boek ‘Ceux de 14’ maakt de plek bekend. <a class="ref" href="#bron-8">[8]</a></p><div class="links"><a class="lk sim" href="simulatie.html#mijnen1915">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=eparges">🗺 Op de kaart</a></div></div></div>
+<div class="ev" id="e-1915-03-01"><div class="d">1915–1918</div><div><h3>Mijnoorlog op de Butte de Vauquois</h3><p>Fransen en Duitsers graven gangen onder de heuvel en blazen het dorp op. Er blijft een rij kraters over. <a class="ref" href="#bron-7">[7]</a></p><div class="links"><a class="lk sim" href="simulatie.html#mijnen1915">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=vauquois">🗺 Op de kaart</a></div></div></div>
+<div class="ev" id="e-1915-08-05"><div class="d">aug. 1915</div><div><h3>Forten ontwapend</h3><p>Na de snelle val van de Belgische forten in 1914 haalt het Franse leger veel kanonnen uit de forten van Verdun voor gebruik elders. Kolonel Driant waarschuwt dat de verdediging te zwak is. <a class="ref" href="#bron-1">[1]</a><a class="ref" href="#bron-2">[2]</a></p><div class="links"><a class="lk kaart" href="kaart.html#p=driant">🗺 Op de kaart</a></div></div></div>
+
+</section>
+<section class="grp" id="j1916"><h2>1916</h2>
+<div class="ev" id="e-1916-02-21"><div class="d">21 feb. 1916</div><div><h3>Operatie Gericht begint</h3><p>Om 7:15 uur opent ≈ 1.200 Duits geschut het vuur. Na negen uur bombardement vallen stoottroepen aan op een front van ongeveer 10 km ten noorden van Verdun. <a class="ref" href="#bron-1">[1]</a></p><div class="links"><a class="lk sim" href="simulatie.html#gericht">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=driant">🗺 Op de kaart</a></div></div></div>
+<div class="ev" id="e-1916-02-22"><div class="d">22 feb. 1916</div><div><h3>Driant sneuvelt in het Bois des Caures</h3><p>De jagers van Driant hebben twee dagen standgehouden. Haumont valt. <a class="ref" href="#bron-1">[1]</a></p><div class="links"><a class="lk sim" href="simulatie.html#gericht">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=driant">🗺 Op de kaart</a></div></div></div>
+<div class="ev" id="e-1916-02-25"><div class="d">25 feb. 1916</div><div><h3>Fort Douaumont valt; Pétain krijgt het bevel</h3><p>Een kleine groep van het Brandenburgse IR 24 neemt het grootste fort bijna zonder gevecht in. Dezelfde dag krijgt generaal Pétain het bevel bij Verdun. <a class="ref" href="#bron-1">[1]</a><a class="ref" href="#bron-5">[5]</a></p><div class="links"><a class="lk sim" href="simulatie.html#douaumont">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=douaumont">🗺 Op de kaart</a></div></div></div>
+<div class="ev" id="e-1916-02-27"><div class="d">vanaf eind feb. 1916</div><div><h3>De Voie Sacrée</h3><p>Over de weg Bar-le-Duc–Verdun rijden dag en nacht vrachtwagens met troepen, munitie en voedsel. Pétain laat de divisies snel aflossen: de ‘noria’. <a class="ref" href="#bron-1">[1]</a><a class="ref" href="#bron-2">[2]</a></p><div class="links"><a class="lk sim" href="simulatie.html#morthomme">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=voiesacree">🗺 Op de kaart</a></div></div></div>
+<div class="ev" id="e-1916-03-02"><div class="d">2 mrt. 1916</div><div><h3>Kapitein de Gaulle gewond bij Douaumont</h3><p>Bij de gevechten om het dorp Douaumont raakt kapitein Charles de Gaulle gewond. Hij wordt krijgsgevangen gemaakt. <a class="ref" href="#bron-2">[2]</a></p><div class="links"><a class="lk kaart" href="kaart.html#p=douaumontv">🗺 Op de kaart</a></div></div></div>
+<div class="ev" id="e-1916-03-06"><div class="d">6 mrt. 1916</div><div><h3>Aanval op de linkeroever</h3><p>Het Duitse leger valt nu ook links van de Maas aan: de Mort-Homme en de Cote 304 worden het doel. <a class="ref" href="#bron-1">[1]</a></p><div class="links"><a class="lk sim" href="simulatie.html#morthomme">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=mortHomme">🗺 Op de kaart</a></div></div></div>
+<div class="ev" id="e-1916-04-10"><div class="d">10 apr. 1916</div><div><h3>‘On les aura!’</h3><p>Pétain sluit zijn dagorder af met ‘Courage… on les aura!’ (‘Moed… we krijgen ze!’). <a class="ref" href="#bron-2">[2]</a></p><div class="links"><a class="lk sim" href="simulatie.html#morthomme">▶ In de simulatie</a></div></div></div>
+<div class="ev" id="e-1916-05-01"><div class="d">1 mei 1916</div><div><h3>Nivelle volgt Pétain op</h3><p>Pétain wordt chef van een legergroep; generaal Robert Nivelle neemt het bevel bij Verdun over. <a class="ref" href="#bron-1">[1]</a></p></div></div>
+<div class="ev" id="e-1916-05-08"><div class="d">8 mei 1916</div><div><h3>Explosie in Fort Douaumont</h3><p>Een ontploffing doodt honderden Duitse soldaten in het fort (≈ 680). Ze liggen nog achter een dichtgemetselde gang. <a class="ref" href="#bron-5">[5]</a></p><div class="links"><a class="lk sim" href="simulatie.html#morthomme">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=douaumont">🗺 Op de kaart</a></div></div></div>
+<div class="ev" id="e-1916-05-29"><div class="d">eind mei 1916</div><div><h3>Mort-Homme en Cote 304 gevallen</h3><p>Na drie maanden vechten staan de Duitsers op de heuvels van de linkeroever. <a class="ref" href="#bron-1">[1]</a></p><div class="links"><a class="lk sim" href="simulatie.html#morthomme">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=cote304">🗺 Op de kaart</a></div></div></div>
+<div class="ev" id="e-1916-06-01"><div class="d">1–7 juni 1916</div><div><h3>Het beleg van Fort Vaux</h3><p>Majoor Raynal houdt het fort een week vast. Hij geeft zich op 7 juni over, zonder water. <a class="ref" href="#bron-6">[6]</a></p><div class="links"><a class="lk sim" href="simulatie.html#vaux">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=vaux">🗺 Op de kaart</a></div></div></div>
+<div class="ev" id="e-1916-06-22"><div class="d">22–23 juni 1916</div><div><h3>Groenkruis-gas; Thiaumont en Fleury vallen</h3><p>Een groot bombardement met difosgeen gaat vooraf aan de aanval. Froideterre houdt stand. <a class="ref" href="#bron-1">[1]</a></p><div class="links"><a class="lk sim" href="simulatie.html#groenkruis">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=fleury">🗺 Op de kaart</a></div></div></div>
+<div class="ev" id="e-1916-06-23"><div class="d">23 juni 1916</div><div><h3>‘Ils ne passeront pas’</h3><p>Rond deze dagen gebruikt Nivelle de zin ‘Vous ne les laisserez pas passer’. In de vorm ‘On ne passe pas’ wordt het de leus van Verdun. <a class="ref" href="#bron-2">[2]</a></p><div class="links"><a class="lk sim" href="simulatie.html#groenkruis">▶ In de simulatie</a></div></div></div>
+<div class="ev" id="e-1916-07-01"><div class="d">1 juli 1916</div><div><h3>Begin van de Slag aan de Somme</h3><p>Het Brits-Franse offensief aan de Somme dwingt het Duitse leger om troepen en geschut bij Verdun weg te halen. <a class="ref" href="#bron-1">[1]</a></p><div class="links"><a class="lk sim" href="simulatie.html#souville">▶ In de simulatie</a></div></div></div>
+<div class="ev" id="e-1916-07-12"><div class="d">11–12 juli 1916</div><div><h3>Souville: het verste Duitse punt</h3><p>Een laatste grote aanval bereikt het fort van Souville en de Chapelle Sainte-Fine (Lion de Souville). <a class="ref" href="#bron-1">[1]</a></p><div class="links"><a class="lk sim" href="simulatie.html#souville">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=lion">🗺 Op de kaart</a></div></div></div>
+<div class="ev" id="e-1916-08-18"><div class="d">18 aug. 1916</div><div><h3>Fleury definitief Frans</h3><p>Het dorp is van de kaart geveegd. Eind augustus wordt Falkenhayn vervangen door Hindenburg en Ludendorff. <a class="ref" href="#bron-1">[1]</a></p><div class="links"><a class="lk sim" href="simulatie.html#zomer1916">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=fleury">🗺 Op de kaart</a></div></div></div>
+<div class="ev" id="e-1916-09-04"><div class="d">4 sept. 1916</div><div><h3>Ramp in de tunnel van Tavannes</h3><p>Brand en ontploffingen in de spoortunnel, die als schuilplaats dient: honderden doden (aantal omstreden). <a class="ref" href="#bron-2">[2]</a></p><div class="links"><a class="lk sim" href="simulatie.html#zomer1916">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=tavannes">🗺 Op de kaart</a></div></div></div>
+<div class="ev" id="e-1916-10-24"><div class="d">24 okt. 1916</div><div><h3>Douaumont heroverd</h3><p>Na een beschieting met onder meer 400 mm-spoorweghouwitsers nemen Franse troepen, onder wie het RICM, het fort in. <a class="ref" href="#bron-5">[5]</a></p><div class="links"><a class="lk sim" href="simulatie.html#douaumontterug">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=douaumont">🗺 Op de kaart</a></div></div></div>
+<div class="ev" id="e-1916-11-02"><div class="d">2 nov. 1916</div><div><h3>Fort Vaux weer Frans</h3><p>De Duitsers hebben het fort verlaten. <a class="ref" href="#bron-6">[6]</a></p><div class="links"><a class="lk sim" href="simulatie.html#douaumontterug">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=vaux">🗺 Op de kaart</a></div></div></div>
+<div class="ev" id="e-1916-12-15"><div class="d">15–18 dec. 1916</div><div><h3>Einde van de Slag om Verdun</h3><p>Louvemont, de Côte du Poivre en Bezonvaux worden heroverd. Na 300 dagen eindigt de slag, met ≈ 700.000 slachtoffers aan beide kanten (≈ 300.000 doden; omstreden). <a class="ref" href="#bron-1">[1]</a></p><div class="links"><a class="lk sim" href="simulatie.html#dec1916">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=louvemont">🗺 Op de kaart</a></div></div></div>
+
+</section>
+<section class="grp" id="j1917"><h2>1917</h2>
+<div class="ev" id="e-1917-08-20"><div class="d">20–26 aug. 1917</div><div><h3>Mort-Homme en Cote 304 heroverd</h3><p>Pétain, nu opperbevelhebber, laat aanvallen met beperkte doelen en veel artillerie. <a class="ref" href="#bron-14">[14]</a></p><div class="links"><a class="lk sim" href="simulatie.html#aug1917">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=cote304">🗺 Op de kaart</a></div></div></div>
+
+</section>
+<section class="grp" id="j1918"><h2>1918</h2>
+<div class="ev" id="e-1918-09-12"><div class="d">12–16 sept. 1918</div><div><h3>Saint-Mihiel</h3><p>Het Amerikaanse 1e leger van Pershing en Franse troepen drukken de boog weg. <a class="ref" href="#bron-3">[3]</a></p><div class="links"><a class="lk sim" href="simulatie.html#stmihiel">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=montsec">🗺 Op de kaart</a></div></div></div>
+<div class="ev" id="e-1918-09-26"><div class="d">26 sept. 1918</div><div><h3>Meuse-Argonne begint</h3><p>Het grootste offensief in de Amerikaanse geschiedenis, tussen de Argonne en de Maas. <a class="ref" href="#bron-4">[4]</a></p><div class="links"><a class="lk sim" href="simulatie.html#meuseargonne">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=meuseargonne">🗺 Op de kaart</a></div></div></div>
+<div class="ev" id="e-1918-10-08"><div class="d">8 okt. 1918</div><div><h3>Alvin York in de Argonne</h3><p>Korporaal York neemt met een klein groepje 132 Duitsers gevangen. <a class="ref" href="#bron-4">[4]</a></p><div class="links"><a class="lk sim" href="simulatie.html#meuseargonne">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=york">🗺 Op de kaart</a></div></div></div>
+<div class="ev" id="e-1918-11-11"><div class="d">11 nov. 1918</div><div><h3>Wapenstilstand</h3><p>Om 11 uur stopt het vuren. Amerikaanse troepen staan bij Sedan aan de Maas. <a class="ref" href="#bron-4">[4]</a></p><div class="links"><a class="lk sim" href="simulatie.html#meuseargonne">▶ In de simulatie</a></div></div></div>
+
+</section>
+<section class="grp" id="jna1918"><h2>na 1918</h2>
+<div class="ev" id="e-1920-11-10"><div class="d">10 nov. 1920</div><div><h3>De Onbekende Soldaat</h3><p>In de citadel van Verdun kiest soldaat Auguste Thin een van acht kisten. Die gaat naar de Arc de Triomphe in Parijs; de andere zeven liggen op Faubourg-Pavé. <a class="ref" href="#bron-10">[10]</a></p><div class="links"><a class="lk kaart" href="kaart.html#p=citadelle">🗺 Op de kaart</a></div></div></div>
+<div class="ev" id="e-1919-01-01"><div class="d">na 1918</div><div><h3>Zone rouge</h3><p>Het zwaarst getroffen land wordt onbewoonbaar verklaard en bebost. Zes van de negen verwoeste dorpen worden nooit herbouwd. <a class="ref" href="#bron-11">[11]</a><a class="ref" href="#bron-12">[12]</a></p><div class="links"><a class="lk kaart" href="kaart.html#p=fleury">🗺 Op de kaart</a></div></div></div>
+<div class="ev" id="e-1932-08-07"><div class="d">7 aug. 1932</div><div><h3>Het Ossuarium ingewijd</h3><p>Het Ossuaire de Douaumont bewaart de resten van ≈ 130.000 onbekende soldaten. <a class="ref" href="#bron-9">[9]</a></p><div class="links"><a class="lk kaart" href="kaart.html#p=ossuaire">🗺 Op de kaart</a></div></div></div>
+<div class="ev" id="e-1967-09-17"><div class="d">1967</div><div><h3>Mémorial de Verdun geopend</h3><p>Opgericht op initiatief van oud-strijders; in 2016 vernieuwd. <a class="ref" href="#bron-13">[13]</a></p><div class="links"><a class="lk kaart" href="kaart.html#p=memorial">🗺 Op de kaart</a></div></div></div>
+<div class="ev" id="e-1984-09-22"><div class="d">22 sept. 1984</div><div><h3>Mitterrand en Kohl hand in hand</h3><p>Bij het Ossuarium houden de Franse president en de Duitse bondskanselier elkaars hand vast: een beeld van verzoening. <a class="ref" href="#bron-15">[15]</a></p><div class="links"><a class="lk kaart" href="kaart.html#p=ossuaire">🗺 Op de kaart</a></div></div></div>
+<div class="ev" id="e-2016-05-29"><div class="d">29 mei 2016</div><div><h3>Honderd jaar Verdun</h3><p>Hollande en Merkel herdenken samen de slag, 100 jaar later. <a class="ref" href="#bron-1">[1]</a></p><div class="links"><a class="lk kaart" href="kaart.html#p=necropole">🗺 Op de kaart</a></div></div></div>
+
+</section>
+<section class="grp" id="bronnen"><h2>Bronnen</h2><ol class="bronnen"><li id="bron-1">Wikipedia (en), Battle of Verdun – <a href="https://en.wikipedia.org/wiki/Battle_of_Verdun" target="_blank" rel="noopener">en.wikipedia.org/wiki/Battle_of_Verdun</a></li><li id="bron-2">Wikipedia (fr), Bataille de Verdun – <a href="https://fr.wikipedia.org/wiki/Bataille_de_Verdun" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Bataille_de_Verdun</a></li><li id="bron-3">Wikipedia (en), Battle of Saint-Mihiel – <a href="https://en.wikipedia.org/wiki/Battle_of_Saint-Mihiel" target="_blank" rel="noopener">en.wikipedia.org/wiki/Battle_of_Saint-Mihiel</a></li><li id="bron-4">Wikipedia (en), Meuse–Argonne offensive – <a href="https://en.wikipedia.org/wiki/Meuse%E2%80%93Argonne_offensive" target="_blank" rel="noopener">en.wikipedia.org/wiki/Meuse%E2%80%93Argonne_offensive</a></li><li id="bron-5">Wikipedia (fr), Fort de Douaumont – <a href="https://fr.wikipedia.org/wiki/Fort_de_Douaumont" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Fort_de_Douaumont</a></li><li id="bron-6">Wikipedia (fr), Fort de Vaux – <a href="https://fr.wikipedia.org/wiki/Fort_de_Vaux" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Fort_de_Vaux</a></li><li id="bron-7">Wikipedia (fr), Butte de Vauquois – <a href="https://fr.wikipedia.org/wiki/Butte_de_Vauquois" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Butte_de_Vauquois</a></li><li id="bron-8">Wikipedia (fr), Bataille des Éparges – <a href="https://fr.wikipedia.org/wiki/Bataille_des_%C3%89parges" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Bataille_des_%C3%89parges</a></li><li id="bron-9">Wikipedia (fr), Ossuaire de Douaumont – <a href="https://fr.wikipedia.org/wiki/Ossuaire_de_Douaumont" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Ossuaire_de_Douaumont</a></li><li id="bron-10">Wikipedia (en), Tomb of the Unknown Soldier (France) – <a href="https://en.wikipedia.org/wiki/Tomb_of_the_Unknown_Soldier_(France)" target="_blank" rel="noopener">en.wikipedia.org/wiki/Tomb_of_the_Unknown_Soldier_(France)</a></li><li id="bron-11">Wikipedia (fr), Villages français détruits durant la Première Guerre mondiale – <a href="https://fr.wikipedia.org/wiki/Villages_fran%C3%A7ais_d%C3%A9truits_durant_la_Premi%C3%A8re_Guerre_mondiale" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Villages_fran%C3%A7ais_d%C3%A9truits_durant_la_P</a></li><li id="bron-12">Wikipedia (en), Zone rouge – <a href="https://en.wikipedia.org/wiki/Zone_rouge" target="_blank" rel="noopener">en.wikipedia.org/wiki/Zone_rouge</a></li><li id="bron-13">Mémorial de Verdun – <a href="https://memorial-verdun.fr/" target="_blank" rel="noopener">memorial-verdun.fr/</a></li><li id="bron-14">Wikipedia (en), Second Offensive Battle of Verdun – <a href="https://en.wikipedia.org/wiki/Second_Offensive_Battle_of_Verdun" target="_blank" rel="noopener">en.wikipedia.org/wiki/Second_Offensive_Battle_of_Verdun</a></li><li id="bron-15">Wikipedia (fr), Poignée de main de François Mitterrand et Helmut Kohl à Douaumont – <a href="https://fr.wikipedia.org/wiki/Poign%C3%A9e_de_main_de_Fran%C3%A7ois_Mitterrand_et_Helmut_Kohl_%C3%A0_Douaumont" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Poign%C3%A9e_de_main_de_Fran%C3%A7ois_Mitterrand</a></li></ol></section>
+</main>
+<footer>Verdun 14–18 · bezoekersgids · <a href="index.html">menu</a> · <a href="https://github.com/RvWest67/verdun-loopgravenkaart#readme">bronnen en licenties</a></footer>
+
+</body>
+</html>

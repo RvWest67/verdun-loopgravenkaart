@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Begrippen – Verdun 1914–1918</title>
+<meta name="description" content="Woordenlijst bij de Slag om Verdun en de gevechten van 1914–1918.">
+<meta name="theme-color" content="#2c3442">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%A0%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#fffdf7;--ink:#2b2b2b;--accent:#8b5a2b;--bar:#2c3442;--poppy:#3b5bdb}
+*{box-sizing:border-box}
+html.sm{scroll-behavior:smooth}
+html,body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+#top{position:sticky;top:0;z-index:50;background:var(--bar);color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+#bar{display:flex;align-items:center;gap:6px;padding:calc(6px + env(safe-area-inset-top)) 8px 6px}
+#bar h1{font-size:15px;margin:0;flex:1;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#bar h1 small{display:block;font-weight:400;font-size:11px;opacity:.8}
+.tbtn{background:#fff;color:var(--bar);border:0;border-radius:18px;padding:7px 11px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;text-decoration:none;display:inline-block}
+.tbtn.home{padding:7px 9px}
+.row{display:flex;gap:6px;overflow-x:auto;padding:0 8px 7px;scrollbar-width:none}
+.row::-webkit-scrollbar{display:none}
+.ych{flex:0 0 auto;color:#fff;text-decoration:none;font-weight:700;font-size:13px;padding:5px 11px;border-radius:15px;border:1.5px solid rgba(255,255,255,.35)}
+.ych.on{background:var(--poppy);border-color:var(--poppy)}
+main{max-width:720px;margin:0 auto;padding:10px 12px 20px}
+.intro{font-size:14px;line-height:1.5;color:#444;margin:6px 2px}
+details.toc{font-size:13.5px;margin:4px 2px 6px}
+details.toc summary{cursor:pointer;color:var(--accent);font-weight:700}
+details.toc ol{padding-left:22px;line-height:1.6;margin:6px 0}
+details.toc a{color:var(--bar)}
+.grp{scroll-margin-top:96px}
+.grp h2{font-size:21px;color:var(--accent);margin:22px 0 8px;padding:0 2px 4px;border-bottom:2px solid #e4d9c6}
+.st{background:#fff;border:1px solid #e4d9c6;border-left:5px solid #7048e8;border-radius:12px;padding:12px 13px;margin:0 0 14px;box-shadow:0 1px 4px rgba(44,52,66,.08);scroll-margin-top:100px}
+.st h3{margin:0;font-size:18px;color:var(--bar);line-height:1.25}
+.wie{font-size:12.5px;color:#7a6a50;margin:2px 0 6px;font-style:italic}
+.st p{font-size:14.5px;line-height:1.55;margin:6px 0}
+blockquote{margin:10px 0;padding:8px 12px;border-left:3px solid var(--poppy);background:#fbf5ee;font-style:italic;font-size:14px;line-height:1.5;color:#4a3f2c}
+blockquote cite{display:block;font-style:normal;font-size:11.5px;color:#777;margin-top:4px}
+.poem{margin:10px 0;background:#fbf5ee;border-radius:10px;padding:8px 12px}
+.poem summary{cursor:pointer;font-weight:700;color:var(--poppy);font-size:14px}
+.poem .cols{display:grid;grid-template-columns:1fr;gap:6px 22px}
+@media(min-width:620px){.poem .cols{grid-template-columns:1fr 1fr}}
+.poem h4{margin:10px 0 2px;font-size:15px;color:var(--bar)}
+.poem p{font-family:Georgia,"Times New Roman",serif;font-size:14.5px;line-height:1.5;margin:6px 0}
+.poem .pc{font-size:11.5px;color:#777}
+.leg{font-size:13px;background:#fff4e6;border-left:3px solid #f08c00;padding:6px 9px;margin:10px 0 0;line-height:1.45}
+.links{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.lk{font-size:12.5px;text-decoration:none;background:#f3e6d6;color:var(--bar);border-radius:12px;padding:5px 10px;font-weight:600}
+.lk.tl{background:#ece5fd}.lk.sim{background:#fde4e1}
+details.src{margin-top:8px;font-size:12px;color:#666}
+details.src summary{cursor:pointer}
+details.src ul{margin:4px 0;padding-left:18px;line-height:1.5}
+details.src a{color:var(--accent)}
+.st.flash{animation:flash 2.2s ease-out}
+@keyframes flash{0%{box-shadow:0 0 0 4px #7048e8}100%{box-shadow:0 1px 4px rgba(44,52,66,.08)}}
+.fotos{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 6px}
+.ft{margin:0;flex:1 1 130px;max-width:170px;min-width:120px;background:#fbf5ee;border-radius:10px;padding:5px;display:flex;flex-direction:column}
+.ft.gr{flex:1 1 170px;max-width:300px}
+.ft.gr img{max-height:250px;object-fit:cover}
+.ft img{display:block;width:100%;height:auto;border-radius:7px;background:#ece5d8}
+.ft.po img{max-height:220px;object-fit:cover;object-position:top}
+.ft figcaption{font-size:12px;line-height:1.35;color:#4a3f2c;margin:4px 2px 0}
+.ft .cr{display:block;font-size:10.5px;color:#888;margin-top:2px}
+.ft .cr a{color:#888}
+.fotonote{font-size:11.5px;color:#888;margin:0 0 4px}
+.note{font-size:12.5px;color:#666;line-height:1.5}
+footer{text-align:center;font-size:12px;color:#777;padding:10px 16px calc(24px + env(safe-area-inset-bottom))}
+footer a{color:var(--accent)}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.st.flash{animation:none}}
+.tg{display:inline-block;font-size:11px;font-weight:800;border-radius:999px;padding:1px 7px;white-space:nowrap;vertical-align:middle}.tg.lg{background:#f3e3f7;color:#6a1b7a}.tg.om{background:#fff1d6;color:#8a5300}
+.ref{font-size:11px;vertical-align:super;line-height:0;text-decoration:none;color:var(--accent);font-weight:700}
+ol.bronnen{font-size:12.5px;line-height:1.5;padding-left:22px;color:#555}ol.bronnen a{color:var(--accent);word-break:break-word}ol.bronnen li{scroll-margin-top:90px}
+.ev{display:grid;grid-template-columns:92px 1fr;gap:4px 10px;padding:9px 0;border-bottom:1px solid #eee5d6;scroll-margin-top:100px}.ev .d{font-weight:800;color:var(--accent);font-size:13px;line-height:1.3}.ev h3{margin:0 0 2px;font-size:15.5px;color:var(--bar)}.ev p{margin:2px 0;font-size:14px;line-height:1.5}
+.box{background:#fff;border:1px solid #e4d9c6;border-left:5px solid var(--accent);border-radius:12px;padding:11px 13px;margin:0 0 12px}
+.box h3{margin:0 0 4px;font-size:17px;color:var(--bar)}.box p,.box li{font-size:14.5px;line-height:1.55}.box p{margin:6px 0}
+.warn{background:#fff5f5;border-left-color:#c92a2a}
+dl.terms dt{font-weight:800;color:var(--bar);margin-top:10px;font-size:15px;scroll-margin-top:100px}dl.terms dd{margin:2px 0 0 0;font-size:14px;line-height:1.5}
+table.t{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0}table.t td,table.t th{border-bottom:1px solid #e4d9c6;padding:5px 4px;text-align:left;vertical-align:top}table.t th{color:var(--accent)}
+.lk.kaart{background:#e7f1fb}
+.st{border-left-color:#3b5bdb}
+
+</style>
+<!--pwa-->
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Verdun 14–18"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style>#offtoast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(12px + env(safe-area-inset-bottom));z-index:2000;max-width:min(92vw,520px);background:#212529;color:#fff;font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;border-radius:12px;padding:9px 34px 9px 12px;box-shadow:0 3px 12px rgba(0,0,0,.35)}#offtoast button{position:absolute;right:6px;top:5px;background:none;border:0;color:#fff;font-size:18px;cursor:pointer}</style>
+<script>
+(function(){
+  if('serviceWorker' in navigator && (location.protocol==='https:'||/^(localhost|127\.0\.0\.1)$/.test(location.hostname))) addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+  function toast(on){ let t=document.getElementById('offtoast');
+    if(!on){ if(t) t.remove(); return; } if(t||!document.body) return;
+    t=document.createElement('div'); t.id='offtoast'; t.setAttribute('role','status');
+    t.innerHTML='📴 <b>Offline</b>: je bekijkt de bewaarde versie.'+(document.getElementById('map')||window.L?' Kaarttegels die je eerder bekeek, blijven zichtbaar; de luchtfoto heeft internet nodig.':'')+'<button type="button" aria-label="Sluiten">×</button>';
+    t.querySelector('button').onclick=()=>t.remove(); document.body.appendChild(t); }
+  addEventListener('offline',()=>toast(true)); addEventListener('online',()=>toast(false));
+  document.addEventListener('DOMContentLoaded',()=>{ if(navigator.onLine===false) toast(true); });
+})();
+</script>
+<!--/pwa-->
+</head>
+<body>
+<div id="top"><div id="bar"><a class="tbtn home" href="index.html" aria-label="Home / menu">🏠</a><h1>Begrippen<small>Van AEF tot zone rouge</small></h1><a class="tbtn" href="kaart.html">🗺 Kaart</a></div></div>
+<main>
+<p class="intro">Woorden die je op de borden, in de musea en op deze site tegenkomt, met hun betekenis. Het Frans is soms vrij vertaald.</p>
+<section class="grp" id="az"><h2>A–Z</h2>
+<dl class="terms"><dt id="b-aef">AEF</dt><dd>American Expeditionary Forces: de Amerikaanse troepen in Europa onder Pershing. In 1918 vochten ze bij Saint-Mihiel en in de Meuse-Argonne. <a class="ref" href="#bron-11">[11]</a></dd><dt id="b-blindganger">Blindganger</dt><dd>Een granaat die niet is ontploft. Rond Verdun liggen er nog miljoenen in de grond. Nooit aanraken! <a class="ref" href="#bron-5">[5]</a></dd><dt id="b-boyau">Boyau</dt><dd>Een verbindingsloopgraaf, van achter naar de frontlinie. <a class="ref" href="#bron-2">[2]</a></dd><dt id="b-casemate">Casemate</dt><dd>Een overdekte, versterkte geschutsruimte, vaak van beton. <a class="ref" href="#bron-7">[7]</a></dd><dt id="b-cote">Cote (304)</dt><dd>Een heuvel aangeduid met zijn hoogte in meters op de stafkaart. De Cote 304 is 304 m hoog. <a class="ref" href="#bron-2">[2]</a></dd><dt id="b-crapouillot">Crapouillot</dt><dd>Franse bijnaam voor een loopgraafmortier (‘padje’). <a class="ref" href="#bron-2">[2]</a></dd><dt id="b-feuerwalze">Feuerwalze / rollend vuur</dt><dd>Een gordijn van granaten dat stap voor stap voor de eigen infanterie uit opschuift. <a class="ref" href="#bron-10">[10]</a></dd><dt id="b-gericht">Gericht</dt><dd>De Duitse codenaam voor de aanval op Verdun van februari 1916. ‘Gericht’ betekent zowel ‘rechtbank’ als ‘executieplaats’. <a class="ref" href="#bron-1">[1]</a></dd><dt id="b-ilsne">Ils ne passeront pas</dt><dd>‘Ze zullen er niet door komen’: de leus van Verdun, naar het bevel van Nivelle van juni 1916. <a class="ref" href="#bron-8">[8]</a></dd><dt id="b-grabenkrieg">Loopgravenoorlog</dt><dd>Oorlog vanuit vaste stellingen. Aan het westfront duurde die van eind 1914 tot 1918. <a class="ref" href="#bron-1">[1]</a></dd><dt id="b-rgion">Mort pour la France</dt><dd>Officiële Franse vermelding voor wie sneuvelde. De zes niet herbouwde dorpen kregen dezelfde titel: ‘mort pour la France’. <a class="ref" href="#bron-4">[4]</a></dd><dt id="b-mortHomme">Mort-Homme</dt><dd>‘Dode man’: een heuvel op de linkeroever. De naam bestond al vóór de oorlog. <a class="ref" href="#bron-2">[2]</a></dd><dt id="b-noria">Noria</dt><dd>Pétains systeem om de divisies snel af te lossen, naar het schepwiel dat water omhoog haalt. <a class="ref" href="#bron-1">[1]</a></dd><dt id="b-necropole">Nécropole nationale</dt><dd>Een nationale Franse militaire begraafplaats. <a class="ref" href="#bron-2">[2]</a></dd><dt id="b-ossuaire">Ossuaire</dt><dd>Knekelhuis: een gebouw met de beenderen van onbekende doden. Bij Douaumont gaat het om ≈ 130.000 mensen. <a class="ref" href="#bron-2">[2]</a></dd><dt id="b-poilu">Poilu</dt><dd>‘De harige’: bijnaam van de Franse frontsoldaat. <a class="ref" href="#bron-3">[3]</a></dd><dt id="b-rir">Régiment</dt><dd>Een Frans regiment had ≈ 3.000 man in drie bataljons. RI = régiment d’infanterie. <a class="ref" href="#bron-2">[2]</a></dd><dt id="b-sape">Sape / sappe</dt><dd>Een gegraven gang of loopgraaf die naar de vijand toe loopt. Een sapeur is een genie-soldaat. <a class="ref" href="#bron-2">[2]</a></dd><dt id="b-sturm">Stoßtrupp / stoottroep</dt><dd>Duitse kleine aanvalsgroep met granaten, lichte mitrailleurs en vlammenwerpers. <a class="ref" href="#bron-9">[9]</a></dd><dt id="b-serede">Séré de Rivières</dt><dd>Het fortenstelsel dat Frankrijk na 1870 bouwde, genoemd naar generaal Raymond Séré de Rivières. <a class="ref" href="#bron-7">[7]</a></dd><dt id="b-territorial">Territorial</dt><dd>Een Franse soldaat van ouder dan 34. Ze werkten vaak achter het front, bijvoorbeeld aan de Voie Sacrée. <a class="ref" href="#bron-6">[6]</a></dd><dt id="b-tourelle">Tourelle</dt><dd>Draaibare stalen geschutskoepel van een fort, die kon zakken en weer omhoog komen. <a class="ref" href="#bron-7">[7]</a></dd><dt id="b-tranchee">Tranchée</dt><dd>Loopgraaf. <a class="ref" href="#bron-2">[2]</a></dd><dt id="b-villages">Village détruit</dt><dd>Een van de negen dorpen rond Verdun die volledig werden verwoest. Ze hebben nog een ‘maire’ (burgemeester), maar bijna geen inwoners. <a class="ref" href="#bron-4">[4]</a></dd><dt id="b-voie">Voie Sacrée</dt><dd>De ‘heilige weg’ van Bar-le-Duc naar Verdun, de enige aanvoerroute in 1916. <a class="ref" href="#bron-6">[6]</a></dd><dt id="b-zone">Zone rouge</dt><dd>Het land dat na de oorlog onbewoonbaar werd verklaard, door blindgangers, gif en verwoesting. Een groot deel is nu bos. <a class="ref" href="#bron-5">[5]</a></dd></dl>
+</section>
+<section class="grp" id="bronnen"><h2>Bronnen</h2><ol class="bronnen"><li id="bron-1">Wikipedia (en), Battle of Verdun – <a href="https://en.wikipedia.org/wiki/Battle_of_Verdun" target="_blank" rel="noopener">en.wikipedia.org/wiki/Battle_of_Verdun</a></li><li id="bron-2">Wikipedia (fr), Bataille de Verdun – <a href="https://fr.wikipedia.org/wiki/Bataille_de_Verdun" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Bataille_de_Verdun</a></li><li id="bron-3">Wikipedia (en), Poilu – <a href="https://en.wikipedia.org/wiki/Poilu" target="_blank" rel="noopener">en.wikipedia.org/wiki/Poilu</a></li><li id="bron-4">Wikipedia (fr), Villages français détruits durant la Première Guerre mondiale – <a href="https://fr.wikipedia.org/wiki/Villages_fran%C3%A7ais_d%C3%A9truits_durant_la_Premi%C3%A8re_Guerre_mondiale" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Villages_fran%C3%A7ais_d%C3%A9truits_durant_la_P</a></li><li id="bron-5">Wikipedia (en), Zone rouge – <a href="https://en.wikipedia.org/wiki/Zone_rouge" target="_blank" rel="noopener">en.wikipedia.org/wiki/Zone_rouge</a></li><li id="bron-6">Wikipedia (fr), Voie sacrée – <a href="https://fr.wikipedia.org/wiki/Voie_sacr%C3%A9e" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Voie_sacr%C3%A9e</a></li><li id="bron-7">Wikipedia (fr), Système Séré de Rivières – <a href="https://fr.wikipedia.org/wiki/Syst%C3%A8me_S%C3%A9r%C3%A9_de_Rivi%C3%A8res" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Syst%C3%A8me_S%C3%A9r%C3%A9_de_Rivi%C3%A8res</a></li><li id="bron-8">Wikipedia (en), Ils ne passeront pas – <a href="https://en.wikipedia.org/wiki/They_shall_not_pass" target="_blank" rel="noopener">en.wikipedia.org/wiki/They_shall_not_pass</a></li><li id="bron-9">Wikipedia (en), Stormtrooper – <a href="https://en.wikipedia.org/wiki/Stormtrooper" target="_blank" rel="noopener">en.wikipedia.org/wiki/Stormtrooper</a></li><li id="bron-10">Wikipedia (en), Creeping barrage – <a href="https://en.wikipedia.org/wiki/Barrage_(artillery)" target="_blank" rel="noopener">en.wikipedia.org/wiki/Barrage_(artillery)</a></li><li id="bron-11">Wikipedia (en), American Expeditionary Forces – <a href="https://en.wikipedia.org/wiki/American_Expeditionary_Forces" target="_blank" rel="noopener">en.wikipedia.org/wiki/American_Expeditionary_Forces</a></li></ol></section>
+</main>
+<footer>Verdun 14–18 · bezoekersgids · <a href="index.html">menu</a> · <a href="https://github.com/RvWest67/verdun-loopgravenkaart#readme">bronnen en licenties</a></footer>
+
+</body>
+</html>

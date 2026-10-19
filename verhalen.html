@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Verhalen Verdun 1914–1918</title>
+<meta name="description" content="Verhalen over de mensen achter de Slag om Verdun en de gevechten van 1914–1918, met foto’s en bronnen.">
+<meta name="theme-color" content="#2c3442">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%A0%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#fffdf7;--ink:#2b2b2b;--accent:#8b5a2b;--bar:#2c3442;--poppy:#3b5bdb}
+*{box-sizing:border-box}
+html.sm{scroll-behavior:smooth}
+html,body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+#top{position:sticky;top:0;z-index:50;background:var(--bar);color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+#bar{display:flex;align-items:center;gap:6px;padding:calc(6px + env(safe-area-inset-top)) 8px 6px}
+#bar h1{font-size:15px;margin:0;flex:1;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#bar h1 small{display:block;font-weight:400;font-size:11px;opacity:.8}
+.tbtn{background:#fff;color:var(--bar);border:0;border-radius:18px;padding:7px 11px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;text-decoration:none;display:inline-block}
+.tbtn.home{padding:7px 9px}
+.row{display:flex;gap:6px;overflow-x:auto;padding:0 8px 7px;scrollbar-width:none}
+.row::-webkit-scrollbar{display:none}
+.ych{flex:0 0 auto;color:#fff;text-decoration:none;font-weight:700;font-size:13px;padding:5px 11px;border-radius:15px;border:1.5px solid rgba(255,255,255,.35)}
+.ych.on{background:var(--poppy);border-color:var(--poppy)}
+main{max-width:720px;margin:0 auto;padding:10px 12px 20px}
+.intro{font-size:14px;line-height:1.5;color:#444;margin:6px 2px}
+details.toc{font-size:13.5px;margin:4px 2px 6px}
+details.toc summary{cursor:pointer;color:var(--accent);font-weight:700}
+details.toc ol{padding-left:22px;line-height:1.6;margin:6px 0}
+details.toc a{color:var(--bar)}
+.grp{scroll-margin-top:96px}
+.grp h2{font-size:21px;color:var(--accent);margin:22px 0 8px;padding:0 2px 4px;border-bottom:2px solid #e4d9c6}
+.st{background:#fff;border:1px solid #e4d9c6;border-left:5px solid #7048e8;border-radius:12px;padding:12px 13px;margin:0 0 14px;box-shadow:0 1px 4px rgba(44,52,66,.08);scroll-margin-top:100px}
+.st h3{margin:0;font-size:18px;color:var(--bar);line-height:1.25}
+.wie{font-size:12.5px;color:#7a6a50;margin:2px 0 6px;font-style:italic}
+.st p{font-size:14.5px;line-height:1.55;margin:6px 0}
+blockquote{margin:10px 0;padding:8px 12px;border-left:3px solid var(--poppy);background:#fbf5ee;font-style:italic;font-size:14px;line-height:1.5;color:#4a3f2c}
+blockquote cite{display:block;font-style:normal;font-size:11.5px;color:#777;margin-top:4px}
+.poem{margin:10px 0;background:#fbf5ee;border-radius:10px;padding:8px 12px}
+.poem summary{cursor:pointer;font-weight:700;color:var(--poppy);font-size:14px}
+.poem .cols{display:grid;grid-template-columns:1fr;gap:6px 22px}
+@media(min-width:620px){.poem .cols{grid-template-columns:1fr 1fr}}
+.poem h4{margin:10px 0 2px;font-size:15px;color:var(--bar)}
+.poem p{font-family:Georgia,"Times New Roman",serif;font-size:14.5px;line-height:1.5;margin:6px 0}
+.poem .pc{font-size:11.5px;color:#777}
+.leg{font-size:13px;background:#fff4e6;border-left:3px solid #f08c00;padding:6px 9px;margin:10px 0 0;line-height:1.45}
+.links{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.lk{font-size:12.5px;text-decoration:none;background:#f3e6d6;color:var(--bar);border-radius:12px;padding:5px 10px;font-weight:600}
+.lk.tl{background:#ece5fd}.lk.sim{background:#fde4e1}
+details.src{margin-top:8px;font-size:12px;color:#666}
+details.src summary{cursor:pointer}
+details.src ul{margin:4px 0;padding-left:18px;line-height:1.5}
+details.src a{color:var(--accent)}
+.st.flash{animation:flash 2.2s ease-out}
+@keyframes flash{0%{box-shadow:0 0 0 4px #7048e8}100%{box-shadow:0 1px 4px rgba(44,52,66,.08)}}
+.fotos{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 6px}
+.ft{margin:0;flex:1 1 130px;max-width:170px;min-width:120px;background:#fbf5ee;border-radius:10px;padding:5px;display:flex;flex-direction:column}
+.ft.gr{flex:1 1 170px;max-width:300px}
+.ft.gr img{max-height:250px;object-fit:cover}
+.ft img{display:block;width:100%;height:auto;border-radius:7px;background:#ece5d8}
+.ft.po img{max-height:220px;object-fit:cover;object-position:top}
+.ft figcaption{font-size:12px;line-height:1.35;color:#4a3f2c;margin:4px 2px 0}
+.ft .cr{display:block;font-size:10.5px;color:#888;margin-top:2px}
+.ft .cr a{color:#888}
+.fotonote{font-size:11.5px;color:#888;margin:0 0 4px}
+.note{font-size:12.5px;color:#666;line-height:1.5}
+footer{text-align:center;font-size:12px;color:#777;padding:10px 16px calc(24px + env(safe-area-inset-bottom))}
+footer a{color:var(--accent)}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.st.flash{animation:none}}
+.tg{display:inline-block;font-size:11px;font-weight:800;border-radius:999px;padding:1px 7px;white-space:nowrap;vertical-align:middle}.tg.lg{background:#f3e3f7;color:#6a1b7a}.tg.om{background:#fff1d6;color:#8a5300}
+.ref{font-size:11px;vertical-align:super;line-height:0;text-decoration:none;color:var(--accent);font-weight:700}
+ol.bronnen{font-size:12.5px;line-height:1.5;padding-left:22px;color:#555}ol.bronnen a{color:var(--accent);word-break:break-word}ol.bronnen li{scroll-margin-top:90px}
+.ev{display:grid;grid-template-columns:92px 1fr;gap:4px 10px;padding:9px 0;border-bottom:1px solid #eee5d6;scroll-margin-top:100px}.ev .d{font-weight:800;color:var(--accent);font-size:13px;line-height:1.3}.ev h3{margin:0 0 2px;font-size:15.5px;color:var(--bar)}.ev p{margin:2px 0;font-size:14px;line-height:1.5}
+.box{background:#fff;border:1px solid #e4d9c6;border-left:5px solid var(--accent);border-radius:12px;padding:11px 13px;margin:0 0 12px}
+.box h3{margin:0 0 4px;font-size:17px;color:var(--bar)}.box p,.box li{font-size:14.5px;line-height:1.55}.box p{margin:6px 0}
+.warn{background:#fff5f5;border-left-color:#c92a2a}
+dl.terms dt{font-weight:800;color:var(--bar);margin-top:10px;font-size:15px;scroll-margin-top:100px}dl.terms dd{margin:2px 0 0 0;font-size:14px;line-height:1.5}
+table.t{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0}table.t td,table.t th{border-bottom:1px solid #e4d9c6;padding:5px 4px;text-align:left;vertical-align:top}table.t th{color:var(--accent)}
+.lk.kaart{background:#e7f1fb}
+.st{border-left-color:#3b5bdb}
+
+</style>
+<!--pwa-->
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Verdun 14–18"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style>#offtoast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(12px + env(safe-area-inset-bottom));z-index:2000;max-width:min(92vw,520px);background:#212529;color:#fff;font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;border-radius:12px;padding:9px 34px 9px 12px;box-shadow:0 3px 12px rgba(0,0,0,.35)}#offtoast button{position:absolute;right:6px;top:5px;background:none;border:0;color:#fff;font-size:18px;cursor:pointer}</style>
+<script>
+(function(){
+  if('serviceWorker' in navigator && (location.protocol==='https:'||/^(localhost|127\.0\.0\.1)$/.test(location.hostname))) addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+  function toast(on){ let t=document.getElementById('offtoast');
+    if(!on){ if(t) t.remove(); return; } if(t||!document.body) return;
+    t=document.createElement('div'); t.id='offtoast'; t.setAttribute('role','status');
+    t.innerHTML='📴 <b>Offline</b>: je bekijkt de bewaarde versie.'+(document.getElementById('map')||window.L?' Kaarttegels die je eerder bekeek, blijven zichtbaar; de luchtfoto heeft internet nodig.':'')+'<button type="button" aria-label="Sluiten">×</button>';
+    t.querySelector('button').onclick=()=>t.remove(); document.body.appendChild(t); }
+  addEventListener('offline',()=>toast(true)); addEventListener('online',()=>toast(false));
+  document.addEventListener('DOMContentLoaded',()=>{ if(navigator.onLine===false) toast(true); });
+})();
+</script>
+<!--/pwa-->
+</head>
+<body>
+<div id="top"><div id="bar"><a class="tbtn home" href="index.html" aria-label="Home / menu">🏠</a><h1>Verhalen<small>De mensen achter de slag</small></h1><a class="tbtn" href="kaart.html">🗺 Kaart</a></div></div>
+<main>
+<p class="intro">Generaals en soldaten van beide kanten, en de Amerikanen van 1918. Alle foto’s komen van Wikimedia Commons en zijn vrij van rechten (publiek domein); de bron staat bij elke foto.</p>
+<section class="grp" id="mensen"><h2>Elf mensen</h2>
+<article class="st" id="petain"><h3>Philippe Pétain</h3><div class="wie">Franse generaal, 1856–1951</div><div class="fotos"><figure class="ft po"><img src="img/petain.svg" alt="Pétain vóór 1918" width="350" height="480" loading="lazy"><figcaption>Pétain vóór 1918<span class="cr">Foto: Henri Manuel, before 1918 · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Philippe_P%C3%A9tain_(before_1918).jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span></figcaption></figure></div><p>Pétain kreeg op 25 februari 1916 het bevel bij Verdun. Hij organiseerde de aanvoer over de Voie Sacrée en liet de divisies na korte tijd aflossen (de ‘noria’). Zo vocht bijna het hele Franse leger een tijd bij Verdun. Op 10 april schreef hij in zijn dagorder: ‘Courage… on les aura!’ In 1917 maakte hij als opperbevelhebber een eind aan de muiterijen, door betere behandeling van de soldaten en voorzichtige aanvallen. Zijn naam is voorgoed beschadigd door zijn rol als leider van het collaborerende Vichy-regime in de Tweede Wereldoorlog; in 1945 werd hij ter dood veroordeeld, wat werd omgezet in levenslang. <a class="ref" href="#bron-1">[1]</a><a class="ref" href="#bron-12">[12]</a></p><div class="links"><a class="lk sim" href="simulatie.html#morthomme">▶ In de simulatie</a></div></article>
+<article class="st" id="nivelle"><h3>Robert Nivelle</h3><div class="wie">Franse generaal, 1856–1924</div><div class="fotos"><figure class="ft po"><img src="img/nivelle.svg" alt="Nivelle, ≈ 1917" width="341" height="480" loading="lazy"><figcaption>Nivelle, ≈ 1917<span class="cr">Foto: onbekend, circa 1917 · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Robert_Georges_Nivelle.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span></figcaption></figure></div><p>Nivelle nam in mei 1916 het bevel bij Verdun over. In juni gaf hij het bevel ‘Vous ne les laisserez pas passer’, waaruit de leus ‘Ils ne passeront pas’ ontstond. Met Mangin leidde hij de geslaagde tegenaanvallen van oktober en december 1916. Daarna werd hij opperbevelhebber, maar zijn offensief aan de Chemin des Dames (april 1917) mislukte, en hij werd vervangen door Pétain. <a class="ref" href="#bron-2">[2]</a></p><div class="links"><a class="lk sim" href="simulatie.html#douaumontterug">▶ In de simulatie</a></div></article>
+<article class="st" id="mangin"><h3>Charles Mangin</h3><div class="wie">Franse generaal, 1866–1925</div><div class="fotos"><figure class="ft po"><img src="img/mangin.svg" alt="Mangin in 1921" width="348" height="480" loading="lazy"><figcaption>Mangin in 1921<span class="cr">Foto: Agence de presse Meurisse, 1921 · Public domain · <a href="https://commons.wikimedia.org/wiki/File:G%C3%A9n%C3%A9ral_Charles_Mangin_agence_Meurisse_BNF_Gallica.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span></figcaption></figure></div><p>Mangin leidde de aanvallen die Fort Douaumont (24 oktober 1916) en daarna Louvemont en Bezonvaux heroverden. Hij stond bekend als agressief en had de bijnaam ‘de slachter’ (‘le boucher’), omdat zijn aanvallen veel levens kostten. <a class="ref" href="#bron-3">[3]</a></p><div class="links"><a class="lk sim" href="simulatie.html#douaumontterug">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=douaumont">🗺 Op de kaart</a></div></article>
+<article class="st" id="falkenhayn"><h3>Erich von Falkenhayn</h3><div class="wie">Chef van de Duitse generale staf, 1861–1922</div><div class="fotos"><figure class="ft po"><img src="img/falkenhayn.svg" alt="Falkenhayn in 1913" width="360" height="438" loading="lazy"><figcaption>Falkenhayn in 1913<span class="cr">Foto: Albert Meyer, 1913 · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Erich_von_Falkenhayn-retouched_(cropped)(2).jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span></figcaption></figure></div><p>Falkenhayn koos Verdun als doel voor 1916. In zijn memoires (1919) schreef hij dat hij het Franse leger wilde laten ‘leegbloeden’. Volgens veel historici bedacht hij dat pas achteraf: het memorandum waarin hij dat eind 1915 zou hebben geschreven, is nooit gevonden. <span class="tg om">⚖️ Omstreden</span> Eind augustus 1916 werd hij vervangen door Hindenburg. <a class="ref" href="#bron-4">[4]</a><a class="ref" href="#bron-12">[12]</a></p><div class="links"><a class="lk sim" href="simulatie.html#gericht">▶ In de simulatie</a></div></article>
+<article class="st" id="kronprinz"><h3>Kroonprins Wilhelm</h3><div class="wie">Bevelhebber Duitse 5e leger, 1882–1951</div><div class="fotos"><figure class="ft po"><img src="img/kronprinz.svg" alt="De kroonprins in 1912/13" width="345" height="480" loading="lazy"><figcaption>De kroonprins in 1912/13<span class="cr">Foto: E. Bieber, 1912/13 · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Kronprinz_Wilhelm_1._Leib-Husarenregiment.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span></figcaption></figure></div><p>De oudste zoon van keizer Wilhelm II voerde het bevel over het 5e leger, dat Verdun aanviel. Hij zei later dat hij al in de zomer van 1916 wilde stoppen. In 1918 vluchtte hij naar Nederland en woonde tot 1923 op het eiland Wieringen. <a class="ref" href="#bron-5">[5]</a></p><div class="links"><a class="lk sim" href="simulatie.html#gericht">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=kronprinz">🗺 Op de kaart</a></div></article>
+<article class="st" id="driant"><h3>Émile Driant</h3><div class="wie">Luitenant-kolonel en volksvertegenwoordiger, 1855–1916</div><div class="fotos"><figure class="ft po"><img src="img/driant.svg" alt="Driant" width="200" height="277" loading="lazy"><figcaption>Driant<span class="cr">Foto: onbekend · Public domain · <a href="https://commons.wikimedia.org/wiki/File:%C3%89mile_Driant_1.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span></figcaption></figure></div><p>Driant schreef vóór de oorlog populaire oorlogsromans onder de naam ‘Capitaine Danrit’. Als parlementslid waarschuwde hij eind 1915 dat de verdediging van Verdun te zwak was. Op 21 en 22 februari 1916 hield hij met zijn jagers het Bois des Caures vast; hij sneuvelde op 22 februari. Zijn graf ligt in het bos. <a class="ref" href="#bron-6">[6]</a></p><div class="links"><a class="lk sim" href="simulatie.html#gericht">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=driant">🗺 Op de kaart</a></div></article>
+<article class="st" id="raynal"><h3>Sylvain-Eugène Raynal</h3><div class="wie">Majoor (commandant), 1867–1939</div><div class="fotos"><figure class="ft po"><img src="img/raynal.svg" alt="Raynal, ≈ 1920" width="300" height="480" loading="lazy"><figcaption>Raynal, ≈ 1920<span class="cr">Foto: onbekend, circa 1920 · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Le_commandant_Raynal.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span></figcaption></figure></div><p>Raynal was al meermaals gewond toen hij in mei 1916 het bevel over Fort Vaux kreeg. Een week lang hield hij het fort vast, terwijl de Duitsers erop stonden en de gangen in vochten. Met zijn laatste postduif, Vaillant, vroeg hij om hulp. Op 7 juni gaf hij zich over, zonder water. Volgens zijn eigen verslag kreeg hij van de kroonprins een degen als eerbetoon. <a class="ref" href="#bron-7">[7]</a></p><div class="links"><a class="lk sim" href="simulatie.html#vaux">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=vaux">🗺 Op de kaart</a></div></article>
+<article class="st" id="maginot"><h3>André Maginot</h3><div class="wie">Sergeant en minister, 1877–1932</div><div class="fotos"><figure class="ft po"><img src="img/maginot.svg" alt="Maginot in 1924" width="360" height="480" loading="lazy"><figcaption>Maginot in 1924<span class="cr">Foto: onbekend, 1924 · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Andre_maginot_loc.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span></figcaption></figure></div><p>Maginot was al volksvertegenwoordiger, maar ging als soldaat naar het front. In november 1914 raakte hij bij Verdun zwaargewond aan zijn been. Later was hij minister van Oorlog en zette hij zich in voor de bouw van de verdedigingslinie die zijn naam kreeg. Zijn monument staat bij Fleury. <a class="ref" href="#bron-8">[8]</a></p><div class="links"><a class="lk kaart" href="kaart.html#p=maginot">🗺 Op de kaart</a></div></article>
+<article class="st" id="genevoix"><h3>Maurice Genevoix</h3><div class="wie">Luitenant en schrijver, 1890–1980</div><div class="fotos"><figure class="ft po"><img src="img/genevoix.svg" alt="Genevoix in 1915" width="360" height="312" loading="lazy"><figcaption>Genevoix in 1915<span class="cr">Foto: onbekend, 1915 · Public domain · <a href="https://commons.wikimedia.org/wiki/File:MauriceGenevoix-1915.png" target="_blank" rel="noopener">Wikimedia Commons</a></span></figcaption></figure></div><p>Genevoix vocht in 1914–1915 bij de Marne en Les Éparges. Daar raakte hij in april 1915 zwaargewond. Zijn boeken, later gebundeld als ‘Ceux de 14’, behoren tot de beste getuigenissen over het front. Hij was later een van de oprichters van het Mémorial de Verdun. In 2020 werd hij in het Panthéon bijgezet. <a class="ref" href="#bron-11">[11]</a></p><div class="links"><a class="lk sim" href="simulatie.html#mijnen1915">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=eparges">🗺 Op de kaart</a></div></article>
+<article class="st" id="pershing"><h3>John J. Pershing</h3><div class="wie">Opperbevelhebber Amerikaanse troepen, 1860–1948</div><div class="fotos"><figure class="ft po"><img src="img/pershing.svg" alt="Pershing (vóór 1917)" width="360" height="431" loading="lazy"><figcaption>Pershing (vóór 1917)<span class="cr">Foto: Bain News Service, between 1907 and 1916 · Public domain · <a href="https://commons.wikimedia.org/wiki/File:General_John_Joseph_Pershing_head_on_shoulders.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span></figcaption></figure></div><p>Pershing wilde dat de Amerikanen als één eigen leger vochten, niet verdeeld over Franse en Britse eenheden. In september 1918 leidde hij het Amerikaanse 1e leger bij Saint-Mihiel en daarna in de Meuse-Argonne. <a class="ref" href="#bron-10">[10]</a></p><div class="links"><a class="lk sim" href="simulatie.html#stmihiel">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=stmihielac">🗺 Op de kaart</a></div></article>
+<article class="st" id="york"><h3>Alvin C. York</h3><div class="wie">Korporaal, later sergeant, 1887–1964</div><div class="fotos"><figure class="ft po"><img src="img/york.svg" alt="York in 1919" width="360" height="435" loading="lazy"><figcaption>York in 1919<span class="cr">Foto: Underwood &amp; Underwood, 1919-05-25 · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Alvin_C._York_1919.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span></figcaption></figure></div><p>York kwam uit de bergen van Tennessee en had uit geloofsovertuiging eerst bezwaar tegen vechten. Op 8 oktober 1918 schakelde hij in de Argonne een Duitse mitrailleurstelling uit; met zijn groepje nam hij 132 man gevangen. Hij kreeg de Medal of Honor. De film ‘Sergeant York’ (1941) maakte hem wereldberoemd. <a class="ref" href="#bron-9">[9]</a></p><div class="links"><a class="lk sim" href="simulatie.html#meuseargonne">▶ In de simulatie</a><a class="lk kaart" href="kaart.html#p=york">🗺 Op de kaart</a></div></article>
+
+</section>
+<section class="grp" id="bronnen"><h2>Bronnen</h2><ol class="bronnen"><li id="bron-1">Wikipedia (fr), Philippe Pétain – <a href="https://fr.wikipedia.org/wiki/Philippe_P%C3%A9tain" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Philippe_P%C3%A9tain</a></li><li id="bron-2">Wikipedia (en), Robert Nivelle – <a href="https://en.wikipedia.org/wiki/Robert_Nivelle" target="_blank" rel="noopener">en.wikipedia.org/wiki/Robert_Nivelle</a></li><li id="bron-3">Wikipedia (en), Charles Mangin – <a href="https://en.wikipedia.org/wiki/Charles_Mangin" target="_blank" rel="noopener">en.wikipedia.org/wiki/Charles_Mangin</a></li><li id="bron-4">Wikipedia (en), Erich von Falkenhayn – <a href="https://en.wikipedia.org/wiki/Erich_von_Falkenhayn" target="_blank" rel="noopener">en.wikipedia.org/wiki/Erich_von_Falkenhayn</a></li><li id="bron-5">Wikipedia (en), Wilhelm, German Crown Prince – <a href="https://en.wikipedia.org/wiki/Wilhelm,_German_Crown_Prince" target="_blank" rel="noopener">en.wikipedia.org/wiki/Wilhelm,_German_Crown_Prince</a></li><li id="bron-6">Wikipedia (fr), Émile Driant – <a href="https://fr.wikipedia.org/wiki/%C3%89mile_Driant" target="_blank" rel="noopener">fr.wikipedia.org/wiki/%C3%89mile_Driant</a></li><li id="bron-7">Wikipedia (fr), Sylvain Eugène Raynal – <a href="https://fr.wikipedia.org/wiki/Sylvain_Eug%C3%A8ne_Raynal" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Sylvain_Eug%C3%A8ne_Raynal</a></li><li id="bron-8">Wikipedia (fr), André Maginot – <a href="https://fr.wikipedia.org/wiki/Andr%C3%A9_Maginot" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Andr%C3%A9_Maginot</a></li><li id="bron-9">Wikipedia (en), Alvin York – <a href="https://en.wikipedia.org/wiki/Alvin_York" target="_blank" rel="noopener">en.wikipedia.org/wiki/Alvin_York</a></li><li id="bron-10">Wikipedia (en), John J. Pershing – <a href="https://en.wikipedia.org/wiki/John_J._Pershing" target="_blank" rel="noopener">en.wikipedia.org/wiki/John_J._Pershing</a></li><li id="bron-11">Wikipedia (fr), Maurice Genevoix – <a href="https://fr.wikipedia.org/wiki/Maurice_Genevoix" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Maurice_Genevoix</a></li><li id="bron-12">Wikipedia (en), Battle of Verdun – <a href="https://en.wikipedia.org/wiki/Battle_of_Verdun" target="_blank" rel="noopener">en.wikipedia.org/wiki/Battle_of_Verdun</a></li></ol></section>
+</main>
+<footer>Verdun 14–18 · bezoekersgids · <a href="index.html">menu</a> · <a href="https://github.com/RvWest67/verdun-loopgravenkaart#readme">bronnen en licenties</a></footer>
+
+</body>
+</html>

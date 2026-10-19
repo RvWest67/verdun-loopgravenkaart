@@ -4,11 +4,13 @@ Nederlandstalige bezoekersgids (Leaflet, geschikt voor mobiel, werkt offline als
 
 **Startpagina:** https://rvwest67.github.io/verdun-loopgravenkaart/
 
-- **Loopgravenkaart:** `kaart.html`: forten, de negen verwoeste dorpen, ossuarium, monumenten, begraafplaatsen en musea; frontlijnen feb. 1916, juli 1916, dec. 1916, aug. 1917 en sept. 1918 (≈); zone rouge (≈); loopgraafresten (OSM); gevaarlaag; route via Google Maps; kompas/draaien; eigen locatie. Een plek direct openen: `kaart.html#p=douaumont`.
+- **Loopgravenkaart:** `kaart.html`: forten, de negen verwoeste dorpen, ossuarium, monumenten, begraafplaatsen en musea; frontlijnen feb. 1916, juli 1916, dec. 1916, aug. 1917 en sept. 1918 (≈); zone rouge (≈); loopgraafresten (OSM); gevaarlaag; route via Google Maps; kompas/draaien; eigen locatie. Een plek direct openen: `kaart.html#p=douaumont`. Met de laag **Lidar (loopgraven en kraters zichtbaar)** zie je het echte reliëf onder de bomen (IGN LiDAR HD, alleen online); direct openen met `kaart.html#p=douaumont&lidar`.
 - **Simulatie:** `simulatie.html`: 14 fasen van sept. 1914 tot nov. 1918 (bombardement, aanvallen, groenkruis-gas, mijnen, tegenaanvallen, Saint-Mihiel, Meuse-Argonne). Alle bewegingen en lijnen zijn **≈ benaderd**. Een fase direct openen: `simulatie.html#douaumont`.
 - **Tijdlijn** (`tijdlijn.html`), **Verhalen** (`verhalen.html`, 11 mensen met foto), **Wapens & tactiek** (`wapens.html`), **Begrippen** (`begrippen.html`), **Wist je dat?** (`wistjedat.html`, met de tags Legende/Omstreden), **Dagprogramma’s** (`programma.html`, 1–3 dagen) en **Praktisch** (`praktisch.html`, openingstijden okt. 2026, veiligheid). Elke pagina heeft genummerde bronnen.
 
 ## Wat is benaderd (≈)
+
+- **Echt (niet benaderd):** de lidar-reliëfschaduw (IGN) en de OSM-loopgraafresten. Een open, gevectoriseerde dataset van de loopgraven van Verdun (zoals de plans directeurs) bestaat niet; de lidar laat de echte loopgraven en trechters wel zien als reliëf.
 
 - **Frontlijnen:** er bestaat geen open, gegeorefereerde dataset van de frontlijnen rond Verdun (gezocht in OpenHistoricalMap, data.gouv.fr en GitHub). De lijnen zijn **schematisch** getekend door gedocumenteerde plaatsen te verbinden. De coördinaten van die plaatsen komen uit OpenStreetMap, met rechte stukken ertussen. Reken op afwijkingen van honderden meters.
 - **Zone rouge:** de kern op de rechteroever is een schematisch vlak. Het bos van de Mort-Homme is de echte bosgrens uit OSM (relatie 5506965).
@@ -19,7 +21,8 @@ Nederlandstalige bezoekersgids (Leaflet, geschikt voor mobiel, werkt offline als
 ## Bronnen
 
 1. Coördinaten: © OpenStreetMap-bijdragers (ODbL), via Nominatim en Overpass API (okt. 2026).
-2. Loopgraafresten: OpenStreetMap `military=trench` (195 lijnen), © OpenStreetMap-bijdragers, ODbL.
+2. Loopgraafresten: OpenStreetMap `military=trench` (230 lijnen, ≈ 30 km, opgehaald 19 okt. 2026), © OpenStreetMap-bijdragers, ODbL.
+2b. Lidar: reliëfschaduw van het MNT LiDAR HD (0,5 m) van het IGN, via de Géoplateforme-WMTS (`https://data.geopf.fr/wmts`, laag `IGNF_LIDAR-HD_MNT_ELEVATION.ELEVATIONGRIDCOVERAGE.SHADOW`, zoom 11–18, geen sleutel nodig), [Licence Ouverte Etalab 2.0](https://www.etalab.gouv.fr/licence-ouverte-open-licence/). Bron: [IGN LiDAR HD](https://geoservices.ign.fr/lidarhd).
 3. Frontlijnen: Wikipedia – [Battle of Verdun](https://en.wikipedia.org/wiki/Battle_of_Verdun), [Bataille de Verdun](https://fr.wikipedia.org/wiki/Bataille_de_Verdun), [Battle of Saint-Mihiel](https://en.wikipedia.org/wiki/Battle_of_Saint-Mihiel), [Meuse-Argonne offensive](https://en.wikipedia.org/wiki/Meuse%E2%80%93Argonne_offensive); kaarten van de West Point Atlas (USMA, publiek domein); Michelin, *Verdun* en *Saint-Mihiel*, Illustrated Michelin Guides to the Battle-Fields (1919, publiek domein).
 4. Verwoeste dorpen: [Villages français détruits durant la Première Guerre mondiale](https://fr.wikipedia.org/wiki/Villages_fran%C3%A7ais_d%C3%A9truits_durant_la_Premi%C3%A8re_Guerre_mondiale).
 5. Zone rouge: [Wikipedia – Zone rouge](https://en.wikipedia.org/wiki/Zone_rouge); Bausinger, Bonnaire & Preuß (2007), *Science of the Total Environment* 382, 259–271 (Place à Gaz).

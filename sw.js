@@ -1,10 +1,10 @@
 /* Service worker Verdun 14–18 – offline gebruik.
    Versie wordt bij elke build automatisch afgeleid uit de inhoud van de bestanden. */
-const VERSION = '6f2a6906fb';
+const VERSION = '92ac6f91a6';
 const PAGES = 'verdun-pages-' + VERSION;
 const TILES = 'verdun-tiles';          // alleen bekeken OSM-tegels, geen bulk-download
 const MAX_TILES = 2500;
-const FILES = ["./", "index.html", "_t_sim.html", "_t_src.html", "_t_wrap.html", "kaart.html", "gmroute.js", "icon-maskable.svg", "icon.svg", "manifest.webmanifest", "popsheet.js", "qr.svg", "vendor/leaflet-rotate/leaflet-rotate.js", "vendor/leaflet/leaflet.css", "vendor/leaflet/leaflet.js"];
+const FILES = ["./", "index.html", "_t_sim.html", "_t_src.html", "_t_wrap.html", "kaart.html", "simulatie.html", "gmroute.js", "icon-maskable.svg", "icon.svg", "manifest.webmanifest", "popsheet.js", "qr.svg", "vendor/leaflet-rotate/leaflet-rotate.js", "vendor/leaflet/leaflet.css", "vendor/leaflet/leaflet.js"];
 
 self.addEventListener('install', ev => {
   ev.waitUntil(caches.open(PAGES).then(c => c.addAll(FILES.map(u => new Request(u, {cache: 'reload'})))).then(() => self.skipWaiting()));

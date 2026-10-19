@@ -149,6 +149,7 @@ input[type=range]{width:100%}
 <div id="info"><div class="box">
   <div style="display:flex;justify-content:space-between;align-items:center"><strong style="font-size:16px">Over deze kaart</strong><button class="tbtn" style="background:#eee" id="infoClose">Sluiten ✕</button></div>
   <p><a href="simulatie.html"><b>▶ Simulatie 1914–1918</b></a>: het verloop van de slag in fasen.</p>
+  <p>Meer: <a href="tijdlijn.html"><b>📜 Tijdlijn</b></a> · <a href="verhalen.html"><b>📖 Verhalen</b></a> · <a href="wapens.html"><b>🛡️ Wapens &amp; tactiek</b></a> · <a href="begrippen.html"><b>📚 Begrippen</b></a> · <a href="wistjedat.html"><b>💡 Wist je dat?</b></a> · <a href="programma.html"><b>🗓 Dagprogramma’s</b></a> · <a href="praktisch.html"><b>🧭 Praktisch</b></a></p>
   <p><b>🚗 Route:</b> tik op een plek en kies ‘🧭 Route in Google Maps’ (auto, vanaf waar je bent) of ‘🚶 te voet’.</p>
   <p><b>🧭 Kaart draaien:</b> tik op het kompas in de balk bovenaan (↺/↻, ‘⬆ N’) of gebruik de schuifbalk onder ☰ Lagen. Met ‘🧭 Volg’ draait de kaart mee met je telefoon.</p>
   <p>Een bezoekersgids voor de WOI-plekken rond Verdun. Voor ‘Mijn locatie’ moet je locatietoegang geven (werkt via https).</p>
@@ -290,7 +291,8 @@ document.getElementById('infoClose').onclick=()=>document.getElementById('info')
 document.getElementById('info').onclick=e=>{ if(e.target.id==='info') e.target.classList.remove('show'); };
 function toast(msg, ms){ const t=document.getElementById('toast'); t.innerHTML=msg; t.style.display='block'; clearTimeout(t._h); t._h=setTimeout(()=>t.style.display='none', ms||3500); }
 // #p=id opent een plek
-{ const m=location.hash.match(/^#p=([\w-]+)/); if(m&&poiMarkers[m[1]]){ map.setView(poiMarkers[m[1]].getLatLng(),15); setTimeout(()=>poiMarkers[m[1]].openPopup(),300); } }
+function openHashPoi(){ const m=location.hash.match(/^#p=([\w-]+)/); if(m&&poiMarkers[m[1]]){ map.setView(poiMarkers[m[1]].getLatLng(),15); setTimeout(()=>poiMarkers[m[1]].openPopup(),300); } }
+openHashPoi(); addEventListener('hashchange', openHashPoi);
 
 // ---- geolocation ----
 let watchId=null, meMarker=null, meCircle=null, firstFix=true;

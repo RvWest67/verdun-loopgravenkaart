@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Verdun 14–18 · WOI-bezoekersgids</title>
+<meta name="description" content="Loopgravenkaart, simulatie, tijdlijn, verhalen en woordenlijst over Verdun 1914–1918: een bezoekersgids voor de WOI-plekken rond Verdun.">
+<meta name="theme-color" content="#2c3442">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%A0%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#fffdf7;--ink:#2b2b2b;--accent:#8b5a2b;--bar:#2c3442;--poppy:#3b5bdb}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+header{background:var(--bar);color:#fff;padding:calc(22px + env(safe-area-inset-top)) 18px 26px;text-align:center;position:relative;overflow:hidden}
+header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:repeating-linear-gradient(90deg,#4a5568 0 14px,#2c3442 14px 18px)}
+.poppy{width:64px;height:64px;display:block;margin:0 auto 8px}
+h1{margin:0;font-size:25px;line-height:1.15;letter-spacing:.01em}
+h1 span{color:#a5b4fc}
+.sub{margin:6px 0 0;font-size:14.5px;opacity:.88}
+main{max-width:560px;margin:0 auto;padding:18px 14px 8px}
+.intro{font-size:14.5px;line-height:1.5;margin:0 2px 16px;color:#444}
+.card{display:flex;gap:14px;align-items:center;text-decoration:none;color:inherit;background:#fff;border:1.5px solid #e4d9c6;border-left:6px solid var(--accent);border-radius:14px;padding:16px 14px;margin:0 0 14px;box-shadow:0 2px 8px rgba(44,52,66,.10);min-height:92px;transition:transform .12s,box-shadow .12s}
+a.card:active{transform:scale(.985)}
+a.card:hover{box-shadow:0 4px 14px rgba(44,52,66,.2)}
+a.card:focus-visible{outline:3px solid var(--poppy);outline-offset:2px}
+.card .ic{flex:0 0 52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:28px;background:#f3e6d6}
+.card.sim{border-left-color:var(--poppy)} .card.sim .ic{background:#e5e9ff}
+.card.tl{border-left-color:#7048e8} .card.tl .ic{background:#ece5fd}
+.card.vh{border-left-color:#2b8a3e} .card.vh .ic{background:#e3f4e6}
+.card.bg{border-left-color:#1c7ed6} .card.bg .ic{background:#e7f1fb}
+.card.rt{border-left-color:#2f9e44} .card.rt .ic{background:#d3f9d8}
+.card.pk{border-left-color:#f08c00} .card.pk .ic{background:#fff4e6}
+.card.prog{border-left-color:#1c7ed6} .card.prog .ic{background:#e7f5ff}
+.card.ip{border-left-color:#0b7285} .card.ip .ic{background:#e3f4f6}
+.card h2{margin:0 0 4px;font-size:18px;color:var(--bar)}
+.card p{margin:0;font-size:13.5px;line-height:1.4;color:#555}
+.card .go{margin-left:auto;font-size:22px;color:var(--accent);flex:0 0 auto}
+.card.soon{opacity:.55;border-left-color:#aaa;box-shadow:none;background:#f5f2ec;cursor:default}
+.card.soon .ic{background:#e6e2da;filter:grayscale(1)}
+.tag{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;background:#ddd;color:#555;border-radius:8px;padding:1px 7px;margin-left:6px;vertical-align:middle}
+blockquote{margin:6px 4px 14px;padding:10px 14px;border-left:3px solid var(--poppy);background:#fbf5ee;font-style:italic;font-size:13.5px;line-height:1.45;color:#4a3f2c}
+blockquote cite{display:block;font-style:normal;font-size:11.5px;color:#777;margin-top:4px}
+.offl{margin:4px 0 14px;background:#fff;border:1px solid #e4d9c6;border-left:5px solid #495057;border-radius:12px;padding:11px 14px;font-size:14px;line-height:1.5}
+.offl h2{margin:0 0 4px;font-size:17px;color:var(--bar)}
+.offl p{margin:5px 0}
+.obtn{display:inline-block;background:var(--bar);color:#fff;border:0;border-radius:18px;padding:9px 15px;font-size:14px;font-weight:700;cursor:pointer;margin:4px 0}
+.obtn:disabled{opacity:.6;cursor:default}
+#offstat{font-size:13px;color:#2b8a3e;font-weight:600;min-height:1.2em}
+#offstat.err{color:#a51111}
+.otip{font-size:13px;background:#fff9db;border-radius:9px;padding:7px 10px}
+.offl details{margin-top:8px;border-top:1px solid #eee;padding-top:6px}
+.offl summary{font-weight:700;cursor:pointer;color:var(--bar)}
+.offl ol{margin:4px 0;padding-left:20px;font-size:13.5px}
+.offl h3{font-size:14px;margin:8px 0 2px}
+.card.wjd{border-left-color:#e67700} .card.wjd .ic{background:#fff0db}
+.share{margin:4px 0 14px;background:#fff;border:1px solid #e4d9c6;border-left:5px solid #e67700;border-radius:12px;padding:11px 14px;font-size:14px;line-height:1.5}
+.share h2{margin:0 0 6px;font-size:17px;color:var(--bar)}
+.shrow{display:flex;gap:14px;align-items:center}
+.qrb{flex:0 0 auto;border:0;padding:6px;background:#fff;border-radius:10px;box-shadow:0 1px 5px rgba(44,52,66,.18);cursor:zoom-in;line-height:0}
+.qrb img{width:112px;height:112px;display:block;image-rendering:pixelated}
+.shtx p{margin:0 0 6px;font-size:13.5px;color:#555}
+.url{font-size:12.5px;word-break:break-all;color:var(--accent);font-weight:600}
+#shstat{font-size:13px;color:#2b8a3e;font-weight:600;min-height:1.2em}
+#shstat.err{color:#a51111}
+#qrov{position:fixed;inset:0;z-index:100;background:rgba(30,24,15,.85);display:none;align-items:center;justify-content:center;flex-direction:column;padding:18px;cursor:zoom-out}
+#qrov.show{display:flex}
+#qrov img{width:min(86vw,72vh,520px);height:auto;background:#fff;padding:14px;border-radius:14px;image-rendering:pixelated}
+#qrov p{color:#fff;font-size:15px;text-align:center;margin:12px 0 0}
+footer{max-width:560px;margin:0 auto;padding:6px 16px calc(22px + env(safe-area-inset-bottom));font-size:12px;color:#6b6b6b;line-height:1.5;text-align:center}
+footer a{color:var(--accent)}
+@media(min-width:700px){h1{font-size:30px}header{padding-top:34px;padding-bottom:34px}}
+@media (prefers-reduced-motion: reduce){.card{transition:none}}
+</style>
+<!--pwa-->
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Verdun 14–18"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style>#offtoast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(12px + env(safe-area-inset-bottom));z-index:2000;max-width:min(92vw,520px);background:#212529;color:#fff;font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;border-radius:12px;padding:9px 34px 9px 12px;box-shadow:0 3px 12px rgba(0,0,0,.35)}#offtoast button{position:absolute;right:6px;top:5px;background:none;border:0;color:#fff;font-size:18px;cursor:pointer}</style>
+<script>
+(function(){
+  if('serviceWorker' in navigator && (location.protocol==='https:'||/^(localhost|127\.0\.0\.1)$/.test(location.hostname))) addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+  function toast(on){ let t=document.getElementById('offtoast');
+    if(!on){ if(t) t.remove(); return; } if(t||!document.body) return;
+    t=document.createElement('div'); t.id='offtoast'; t.setAttribute('role','status');
+    t.innerHTML='📴 <b>Offline</b>: je bekijkt de bewaarde versie.'+(document.getElementById('map')||window.L?' Kaarttegels die je eerder bekeek, blijven zichtbaar; de luchtfoto heeft internet nodig.':'')+'<button type="button" aria-label="Sluiten">×</button>';
+    t.querySelector('button').onclick=()=>t.remove(); document.body.appendChild(t); }
+  addEventListener('offline',()=>toast(true)); addEventListener('online',()=>toast(false));
+  document.addEventListener('DOMContentLoaded',()=>{ if(navigator.onLine===false) toast(true); });
+})();
+</script>
+<!--/pwa-->
+</head>
+<body>
+<header>
+  <!-- Korenbloem (bleuet de France): eigen eenvoudige SVG-tekening -->
+  <svg class="poppy" viewBox="-180 -180 360 360" aria-hidden="true"><g fill="#5c7cfa"><path id="pt" d="M0-30C-26-70-30-120 0-170 30-120 26-70 0-30z"/><use href="#pt" transform="rotate(45)"/><use href="#pt" transform="rotate(90)"/><use href="#pt" transform="rotate(135)"/><use href="#pt" transform="rotate(180)"/><use href="#pt" transform="rotate(225)"/><use href="#pt" transform="rotate(270)"/><use href="#pt" transform="rotate(315)"/></g><g fill="#3b5bdb" opacity=".75"><use href="#pt" transform="rotate(22.5) scale(.62)"/><use href="#pt" transform="rotate(112.5) scale(.62)"/><use href="#pt" transform="rotate(202.5) scale(.62)"/><use href="#pt" transform="rotate(292.5) scale(.62)"/></g><circle r="36" fill="#1b1f3b"/><circle r="16" fill="#91a7ff"/></svg>
+  <h1>Verdun <span>14–18</span></h1>
+  <p class="sub">Bezoekersgids Eerste Wereldoorlog rond Verdun</p>
+</header>
+<main>
+  <p class="intro">Kaarten, een simulatie, een tijdlijn en verhalen over de Slag om Verdun (1916) en de gevechten rond de stad van 1914 tot 1918, voor onderweg op je telefoon. Kies waar je wilt beginnen.</p>
+  <nav aria-label="Menu">
+    <a class="card " id="m-kaart" href="kaart.html">
+      <div class="ic" aria-hidden="true">🗺️</div>
+      <div><h2>Loopgravenkaart</h2><p>Forten, de negen verwoeste dorpen, het Ossuarium, Mort-Homme, Cote 304, Vauquois en de Amerikaanse monumenten. Met frontlijnen 1916–1918 (≈), zone rouge, loopgraafresten, route en je eigen locatie.</p></div>
+      <div class="go" aria-hidden="true">›</div>
+    </a>
+    <div class="card soon sim" id="m-sim" aria-disabled="true">
+      <div class="ic" aria-hidden="true">▶️</div>
+      <div><h2>Simulatie 1914–1918<span class="tag">binnenkort</span></h2><p>De slag in fasen: het bombardement van 21 februari 1916, de val van Douaumont, het groene-kruisgas, de mijnen van Vauquois, de Franse tegenaanvallen, Saint-Mihiel en de Meuse-Argonne.</p></div>
+    </div>
+    <div class="card soon tl" id="m-tl" aria-disabled="true">
+      <div class="ic" aria-hidden="true">📜</div>
+      <div><h2>Tijdlijn<span class="tag">binnenkort</span></h2><p>Van de vestingstad in 1914 via de 300 dagen van 1916 tot de Amerikaanse offensieven van 1918 en de herdenking nu, met bronnen.</p></div>
+    </div>
+    <div class="card soon vh" id="m-vh" aria-disabled="true">
+      <div class="ic" aria-hidden="true">📖</div>
+      <div><h2>Verhalen<span class="tag">binnenkort</span></h2><p>De mensen achter de slag: Pétain, Nivelle, Mangin, Falkenhayn, de Duitse kroonprins, Driant, Raynal, Maginot, sergeant York en anderen.</p></div>
+    </div>
+    <div class="card soon bg" id="m-wap" aria-disabled="true">
+      <div class="ic" aria-hidden="true">🛡️</div>
+      <div><h2>Wapens &amp; tactiek<span class="tag">binnenkort</span></h2><p>Artillerie en forten, het groene-kruisgas, vlammenwerpers, mijnen, de Voie Sacrée en het noria-systeem: hoe er bij Verdun gevochten werd.</p></div>
+    </div>
+    <div class="card soon bg" id="m-bg" aria-disabled="true">
+      <div class="ic" aria-hidden="true">📚</div>
+      <div><h2>Begrippen<span class="tag">binnenkort</span></h2><p>Woordenlijst van abri-caverne en poilu tot zone rouge en ‘mort pour la France’.</p></div>
+    </div>
+    <div class="card soon wjd" id="m-wjd" aria-disabled="true">
+      <div class="ic" aria-hidden="true">💡</div>
+      <div><h2>Wist je dat?<span class="tag">binnenkort</span></h2><p>Weetjes om onderweg voor te lezen, met labels voor legendes en omstreden verhalen.</p></div>
+    </div>
+    <div class="card soon prog" id="m-prog" aria-disabled="true">
+      <div class="ic" aria-hidden="true">📅</div>
+      <div><h2>Dagprogramma’s<span class="tag">binnenkort</span></h2><p>Kant-en-klare programma’s van 1, 2 en 3 dagen met de auto, met tijden, afstanden en een regenvariant.</p></div>
+    </div>
+    <div class="card soon pk" id="m-pk" aria-disabled="true">
+      <div class="ic" aria-hidden="true">🧭</div>
+      <div><h2>Praktisch<span class="tag">binnenkort</span></h2><p>Openingstijden en prijzen (okt. 2026), combikaarten, parkeren, bereikbaarheid, toegankelijkheid en veiligheid in de zone rouge.</p></div>
+    </div>
+  </nav>
+  <section class="share" id="delen" aria-labelledby="shh">
+    <h2 id="shh">🔗 Delen</h2>
+    <div class="shrow">
+      <button class="qrb" id="qrbtn" type="button" aria-label="QR-code vergroten"><img src="qr.svg" alt="QR-code naar deze gids" width="112" height="112"></button>
+      <div class="shtx">
+        <p>Laat een reisgenoot de QR-code scannen (tik om te vergroten) of deel de link.</p>
+        <button class="obtn" id="shbtn" type="button">📤 Deel deze gids</button>
+        <div class="url" id="shurl">rvwest67.github.io/verdun-loopgravenkaart/</div>
+        <div id="shstat" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+  <section class="offl" id="offline" aria-labelledby="offh">
+    <h2 id="offh">📴 Offline gebruiken</h2>
+    <p>Op het slagveld en in de bossen rond Verdun is het mobiele bereik vaak zwak. Deze gids werkt ook zonder internet. Druk thuis (met internet) één keer op de knop: dan worden alle pagina’s en de kaartgegevens (frontlijnen, loopgraven, plekken) op je toestel bewaard. Bij een gewoon bezoek gebeurt dat ook vanzelf.</p>
+    <button class="obtn" id="offbtn" type="button">⬇️ Offline klaarzetten</button>
+    <div id="offstat" role="status" aria-live="polite"></div>
+    <p class="otip"><b>Tip:</b> open de kaart thuis op wifi en zoom in op de gebieden die je wilt bezoeken. Alleen kaarttegels die je zelf bekeken hebt, worden bewaard (maximaal 2500). De site downloadt geen hele gebieden vooraf: dat verbieden de gebruiksregels van OpenStreetMap. De luchtfoto werkt alleen met internet.</p>
+    <details>
+      <summary>📲 Zet op beginscherm</summary>
+      <h3>iPhone en iPad (Safari)</h3>
+      <ol><li>Open deze site in Safari.</li><li>Tik op de deelknop (vierkantje met pijl omhoog).</li><li>Kies <b>Zet op beginscherm</b> en tik op <b>Voeg toe</b>.</li></ol>
+      <h3>Android (Chrome)</h3>
+      <ol><li>Open deze site in Chrome.</li><li>Tik op het menu <b>⋮</b> rechtsboven.</li><li>Kies <b>App installeren</b> of <b>Toevoegen aan startscherm</b> en bevestig.</li></ol>
+      <p>De gids opent dan als een app, zonder adresbalk. Menu’s kunnen per versie iets anders heten.</p>
+    </details>
+  </section>
+  <section class="offl" style="border-left-color:#c92a2a" aria-labelledby="veih">
+    <h2 id="veih">⚠️ Veilig op het slagveld</h2>
+    <p>Het bos rond Verdun ligt nog vol granaten, ook met gifgas. <b>Raak nooit munitie aan</b>, blijf op de paden, betreed geen afgezette terreinen en neem niets mee. Munitie gezien? Afstand houden, plek onthouden en <b>112</b> bellen (of 17, gendarmerie).</p>
+  </section>
+  <blockquote>“Courage… On les aura!” (“Moed… We krijgen ze!”)<cite>Generaal Philippe Pétain, dagorder van 10 april 1916</cite></blockquote>
+</main>
+<footer>
+  Frontlijnen en zones zijn benaderingen (≈) waar dat zo staat aangegeven; animaties zijn visualisaties.<br>
+  <a href="https://github.com/RvWest67/verdun-loopgravenkaart#readme">Bronnen en licenties</a> · Kaartdata © OpenStreetMap-bijdragers
+</footer>
+<script>
+(function(){
+  const btn=document.getElementById('offbtn'), st=document.getElementById('offstat');
+  const ok='serviceWorker' in navigator && 'caches' in window && (location.protocol==='https:'||/^(localhost|127\.0\.0\.1)$/.test(location.hostname));
+  function ask(msg){ return navigator.serviceWorker.ready.then(reg=>new Promise((res,rej)=>{ const ch=new MessageChannel(); ch.port1.onmessage=e=>res(e.data); (reg.active||navigator.serviceWorker.controller).postMessage(msg,[ch.port2]); setTimeout(()=>rej(new Error('timeout')),60000); })); }
+  function show(d){ st.className=''; st.textContent=(d.n===d.total?'✔ Klaar voor offline: ':'Deels bewaard: ')+d.n+' van '+d.total+' bestanden'+(d.tiles?' · '+d.tiles+' kaarttegels bewaard':'')+'.'; }
+  if(!ok){ btn.disabled=true; st.className='err'; st.textContent='Offline klaarzetten werkt alleen op de online site in een moderne browser.'; return; }
+  ask({type:'status'}).then(d=>{ if(d&&d.n) show(d); }).catch(()=>{});
+  btn.addEventListener('click',()=>{
+    btn.disabled=true; st.className=''; st.textContent='Bezig met bewaren…';
+    if(navigator.storage&&navigator.storage.persist) navigator.storage.persist().catch(()=>{});
+    ask({type:'precache'}).then(show).catch(()=>{ st.className='err'; st.textContent='Bewaren lukte niet. Controleer je verbinding en probeer opnieuw.'; }).finally(()=>{ btn.disabled=false; });
+  });
+})();
+</script>
+<div id="qrov" role="dialog" aria-modal="true" aria-label="QR-code groot"><img src="qr.svg" alt="QR-code naar rvwest67.github.io/verdun-loopgravenkaart/"><p>Scan voor de gids · tik om te sluiten</p></div>
+<script>
+(function(){
+  const SITE='https://rvwest67.github.io/verdun-loopgravenkaart/', $=id=>document.getElementById(id), st=$('shstat'), ov=$('qrov');
+  $('qrbtn').onclick=()=>ov.classList.add('show');
+  ov.onclick=()=>ov.classList.remove('show');
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape') ov.classList.remove('show'); });
+  function msg(t,err){ st.className=err?'err':''; st.textContent=t; }
+  function copy(){
+    if(navigator.clipboard&&window.isSecureContext) return navigator.clipboard.writeText(SITE).then(()=>msg('✔ Link gekopieerd.'));
+    return new Promise((res,rej)=>{ const t=document.createElement('textarea'); t.value=SITE; t.setAttribute('readonly',''); t.style.position='fixed'; t.style.opacity='0'; document.body.appendChild(t); t.select();
+      let ok=false; try{ ok=document.execCommand('copy'); }catch(e){} t.remove(); ok?(msg('✔ Link gekopieerd.'),res()):rej(); });
+  }
+  $('shbtn').onclick=()=>{
+    if(navigator.share){ navigator.share({title:'Verdun 14–18',text:'Bezoekersgids Eerste Wereldoorlog rond Verdun',url:SITE}).catch(e=>{ if(e&&e.name==='AbortError') return; copy().catch(()=>msg('Kopiëren lukte niet. Houd de link hieronder ingedrukt om te kopiëren.',true)); }); return; }
+    copy().catch(()=>msg('Kopiëren lukte niet. Houd de link hieronder ingedrukt om te kopiëren.',true));
+  };
+})();
+</script>
+</body>
+</html>

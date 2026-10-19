@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wist je dat? – Verdun 1914–1918</title>
+<meta name="description" content="Weetjes over de Slag om Verdun en de gevechten van 1914–1918, met legendes en omstreden verhalen gemarkeerd.">
+<meta name="theme-color" content="#2c3442">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%A0%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#fffdf7;--ink:#2b2b2b;--accent:#8b5a2b;--bar:#2c3442;--poppy:#3b5bdb}
+*{box-sizing:border-box}
+html.sm{scroll-behavior:smooth}
+html,body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+#top{position:sticky;top:0;z-index:50;background:var(--bar);color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+#bar{display:flex;align-items:center;gap:6px;padding:calc(6px + env(safe-area-inset-top)) 8px 6px}
+#bar h1{font-size:15px;margin:0;flex:1;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#bar h1 small{display:block;font-weight:400;font-size:11px;opacity:.8}
+.tbtn{background:#fff;color:var(--bar);border:0;border-radius:18px;padding:7px 11px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;text-decoration:none;display:inline-block}
+.tbtn.home{padding:7px 9px}
+.row{display:flex;gap:6px;overflow-x:auto;padding:0 8px 7px;scrollbar-width:none}
+.row::-webkit-scrollbar{display:none}
+.ych{flex:0 0 auto;color:#fff;text-decoration:none;font-weight:700;font-size:13px;padding:5px 11px;border-radius:15px;border:1.5px solid rgba(255,255,255,.35)}
+.ych.on{background:var(--poppy);border-color:var(--poppy)}
+main{max-width:720px;margin:0 auto;padding:10px 12px 20px}
+.intro{font-size:14px;line-height:1.5;color:#444;margin:6px 2px}
+details.toc{font-size:13.5px;margin:4px 2px 6px}
+details.toc summary{cursor:pointer;color:var(--accent);font-weight:700}
+details.toc ol{padding-left:22px;line-height:1.6;margin:6px 0}
+details.toc a{color:var(--bar)}
+.grp{scroll-margin-top:96px}
+.grp h2{font-size:21px;color:var(--accent);margin:22px 0 8px;padding:0 2px 4px;border-bottom:2px solid #e4d9c6}
+.st{background:#fff;border:1px solid #e4d9c6;border-left:5px solid #7048e8;border-radius:12px;padding:12px 13px;margin:0 0 14px;box-shadow:0 1px 4px rgba(44,52,66,.08);scroll-margin-top:100px}
+.st h3{margin:0;font-size:18px;color:var(--bar);line-height:1.25}
+.wie{font-size:12.5px;color:#7a6a50;margin:2px 0 6px;font-style:italic}
+.st p{font-size:14.5px;line-height:1.55;margin:6px 0}
+blockquote{margin:10px 0;padding:8px 12px;border-left:3px solid var(--poppy);background:#fbf5ee;font-style:italic;font-size:14px;line-height:1.5;color:#4a3f2c}
+blockquote cite{display:block;font-style:normal;font-size:11.5px;color:#777;margin-top:4px}
+.poem{margin:10px 0;background:#fbf5ee;border-radius:10px;padding:8px 12px}
+.poem summary{cursor:pointer;font-weight:700;color:var(--poppy);font-size:14px}
+.poem .cols{display:grid;grid-template-columns:1fr;gap:6px 22px}
+@media(min-width:620px){.poem .cols{grid-template-columns:1fr 1fr}}
+.poem h4{margin:10px 0 2px;font-size:15px;color:var(--bar)}
+.poem p{font-family:Georgia,"Times New Roman",serif;font-size:14.5px;line-height:1.5;margin:6px 0}
+.poem .pc{font-size:11.5px;color:#777}
+.leg{font-size:13px;background:#fff4e6;border-left:3px solid #f08c00;padding:6px 9px;margin:10px 0 0;line-height:1.45}
+.links{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.lk{font-size:12.5px;text-decoration:none;background:#f3e6d6;color:var(--bar);border-radius:12px;padding:5px 10px;font-weight:600}
+.lk.tl{background:#ece5fd}.lk.sim{background:#fde4e1}
+details.src{margin-top:8px;font-size:12px;color:#666}
+details.src summary{cursor:pointer}
+details.src ul{margin:4px 0;padding-left:18px;line-height:1.5}
+details.src a{color:var(--accent)}
+.st.flash{animation:flash 2.2s ease-out}
+@keyframes flash{0%{box-shadow:0 0 0 4px #7048e8}100%{box-shadow:0 1px 4px rgba(44,52,66,.08)}}
+.fotos{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 6px}
+.ft{margin:0;flex:1 1 130px;max-width:170px;min-width:120px;background:#fbf5ee;border-radius:10px;padding:5px;display:flex;flex-direction:column}
+.ft.gr{flex:1 1 170px;max-width:300px}
+.ft.gr img{max-height:250px;object-fit:cover}
+.ft img{display:block;width:100%;height:auto;border-radius:7px;background:#ece5d8}
+.ft.po img{max-height:220px;object-fit:cover;object-position:top}
+.ft figcaption{font-size:12px;line-height:1.35;color:#4a3f2c;margin:4px 2px 0}
+.ft .cr{display:block;font-size:10.5px;color:#888;margin-top:2px}
+.ft .cr a{color:#888}
+.fotonote{font-size:11.5px;color:#888;margin:0 0 4px}
+.note{font-size:12.5px;color:#666;line-height:1.5}
+footer{text-align:center;font-size:12px;color:#777;padding:10px 16px calc(24px + env(safe-area-inset-bottom))}
+footer a{color:var(--accent)}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.st.flash{animation:none}}
+.tg{display:inline-block;font-size:11px;font-weight:800;border-radius:999px;padding:1px 7px;white-space:nowrap;vertical-align:middle}.tg.lg{background:#f3e3f7;color:#6a1b7a}.tg.om{background:#fff1d6;color:#8a5300}
+.ref{font-size:11px;vertical-align:super;line-height:0;text-decoration:none;color:var(--accent);font-weight:700}
+ol.bronnen{font-size:12.5px;line-height:1.5;padding-left:22px;color:#555}ol.bronnen a{color:var(--accent);word-break:break-word}ol.bronnen li{scroll-margin-top:90px}
+.ev{display:grid;grid-template-columns:92px 1fr;gap:4px 10px;padding:9px 0;border-bottom:1px solid #eee5d6;scroll-margin-top:100px}.ev .d{font-weight:800;color:var(--accent);font-size:13px;line-height:1.3}.ev h3{margin:0 0 2px;font-size:15.5px;color:var(--bar)}.ev p{margin:2px 0;font-size:14px;line-height:1.5}
+.box{background:#fff;border:1px solid #e4d9c6;border-left:5px solid var(--accent);border-radius:12px;padding:11px 13px;margin:0 0 12px}
+.box h3{margin:0 0 4px;font-size:17px;color:var(--bar)}.box p,.box li{font-size:14.5px;line-height:1.55}.box p{margin:6px 0}
+.warn{background:#fff5f5;border-left-color:#c92a2a}
+dl.terms dt{font-weight:800;color:var(--bar);margin-top:10px;font-size:15px;scroll-margin-top:100px}dl.terms dd{margin:2px 0 0 0;font-size:14px;line-height:1.5}
+table.t{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0}table.t td,table.t th{border-bottom:1px solid #e4d9c6;padding:5px 4px;text-align:left;vertical-align:top}table.t th{color:var(--accent)}
+.lk.kaart{background:#e7f1fb}
+.st{border-left-color:#3b5bdb}
+
+</style>
+<!--pwa-->
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Verdun 14–18"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style>#offtoast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(12px + env(safe-area-inset-bottom));z-index:2000;max-width:min(92vw,520px);background:#212529;color:#fff;font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;border-radius:12px;padding:9px 34px 9px 12px;box-shadow:0 3px 12px rgba(0,0,0,.35)}#offtoast button{position:absolute;right:6px;top:5px;background:none;border:0;color:#fff;font-size:18px;cursor:pointer}</style>
+<script>
+(function(){
+  if('serviceWorker' in navigator && (location.protocol==='https:'||/^(localhost|127\.0\.0\.1)$/.test(location.hostname))) addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+  function toast(on){ let t=document.getElementById('offtoast');
+    if(!on){ if(t) t.remove(); return; } if(t||!document.body) return;
+    t=document.createElement('div'); t.id='offtoast'; t.setAttribute('role','status');
+    t.innerHTML='📴 <b>Offline</b>: je bekijkt de bewaarde versie.'+(document.getElementById('map')||window.L?' Kaarttegels die je eerder bekeek, blijven zichtbaar; de luchtfoto heeft internet nodig.':'')+'<button type="button" aria-label="Sluiten">×</button>';
+    t.querySelector('button').onclick=()=>t.remove(); document.body.appendChild(t); }
+  addEventListener('offline',()=>toast(true)); addEventListener('online',()=>toast(false));
+  document.addEventListener('DOMContentLoaded',()=>{ if(navigator.onLine===false) toast(true); });
+})();
+</script>
+<!--/pwa-->
+</head>
+<body>
+<div id="top"><div id="bar"><a class="tbtn home" href="index.html" aria-label="Home / menu">🏠</a><h1>Wist je dat?<small>21 weetjes over Verdun</small></h1><a class="tbtn" href="kaart.html">🗺 Kaart</a></div><nav class="row" aria-label="Snel naar"><a class="ych" href="#g-slag">De slag</a><a class="ych" href="#g-plek">Plekken</a><a class="ych" href="#g-amerikanen">De Amerikanen</a><a class="ych" href="#g-meer">En verder</a></nav></div>
+<main>
+<p class="intro">Weetjes over Verdun. Wat een legende is of waarover de bronnen het oneens zijn, is gemarkeerd met <span class="tg lg">🧚 Legende</span> of <span class="tg om">⚖️ Omstreden</span>.</p>
+<section class="grp" id="g-slag"><h2>De slag</h2>
+<article class="st" id="w1"><h3><span class="n">#1</span> Een fort ingenomen door een handjevol mannen <span class="tg om">⚖️ Omstreden</span></h3><p>Op 25 februari 1916 kwam een kleine groep Brandenburgers Fort Douaumont binnen, het sterkste fort van Verdun. Er zat maar een kleine Franse bezetting van ≈ 60 man. Wie de eer kreeg, werd een ruzie: verschillende Duitse officieren claimden de verovering, terwijl sergeant Kunze waarschijnlijk als eerste binnen was. <a class="ref" href="#bron-1">[1]</a></p><div class="links"><a class="lk kaart" href="kaart.html#p=douaumont">🗺 Op de kaart</a><a class="lk sim" href="simulatie.html#douaumont">▶ In de simulatie</a><a class="lk tl" href="tijdlijn.html#e-1916-02-25">📜 Tijdlijn</a></div></article>
+<article class="st" id="w2"><h3><span class="n">#2</span> Ontploffing in Douaumont</h3><p>Op 8 mei 1916 ontstond er in het Duits geworden fort een brand en ontploffing. Honderden soldaten kwamen om (≈ 680). Ze liggen nog altijd in een dichtgemetselde gang in het fort. <a class="ref" href="#bron-1">[1]</a></p><div class="links"><a class="lk kaart" href="kaart.html#p=douaumont">🗺 Op de kaart</a><a class="lk sim" href="simulatie.html#morthomme">▶ In de simulatie</a><a class="lk tl" href="tijdlijn.html#e-1916-03-06">📜 Tijdlijn</a></div></article>
+<article class="st" id="w3"><h3><span class="n">#3</span> De laatste duif van Fort Vaux <span class="tg lg">🧚 Legende</span></h3><p>Op 4 juni 1916 stuurde majoor Raynal zijn laatste postduif, Vaillant, met een noodkreet naar Verdun. De duif kwam vergiftigd door het gas aan en kreeg een eervolle vermelding van het Franse leger. Over wat er daarna met de duif gebeurde, doen verschillende verhalen de ronde. <a class="ref" href="#bron-2">[2]</a></p><div class="links"><a class="lk kaart" href="kaart.html#p=vaux">🗺 Op de kaart</a><a class="lk sim" href="simulatie.html#vaux">▶ In de simulatie</a><a class="lk tl" href="tijdlijn.html#e-1916-06-01">📜 Tijdlijn</a></div></article>
+<article class="st" id="w4"><h3><span class="n">#4</span> De Tranchée des Baïonnettes <span class="tg lg">🧚 Legende</span></h3><p>Volgens het verhaal werden soldaten van het 137e regiment in juni 1916 levend begraven in hun loopgraaf, met alleen hun bajonetten nog boven de grond. Onderzoek wijst erop dat de doden na het gevecht door de Duitsers in de loopgraaf zijn begraven, en dat de geweren er later zijn neergezet. <a class="ref" href="#bron-3">[3]</a></p><div class="links"><a class="lk kaart" href="kaart.html#p=baionnettes">🗺 Op de kaart</a><a class="lk sim" href="simulatie.html#vaux">▶ In de simulatie</a><a class="lk tl" href="tijdlijn.html#e-1916-06-01">📜 Tijdlijn</a></div></article>
+<article class="st" id="w5"><h3><span class="n">#5</span> Zestien keer van eigenaar <span class="tg om">⚖️ Omstreden</span></h3><p>Het dorp Fleury zou in de zomer van 1916 ≈ 16 keer van eigenaar zijn gewisseld. Dat getal wordt vaak genoemd, maar is moeilijk te controleren. <a class="ref" href="#bron-4">[4]</a></p><div class="links"><a class="lk kaart" href="kaart.html#p=fleury">🗺 Op de kaart</a><a class="lk sim" href="simulatie.html#groenkruis">▶ In de simulatie</a><a class="lk tl" href="tijdlijn.html#e-1916-06-22">📜 Tijdlijn</a></div></article>
+<article class="st" id="w6"><h3><span class="n">#6</span> De Leeuw van Souville</h3><p>Het beeld van een stervende leeuw bij de Chapelle Sainte-Fine staat op de plek waar de Duitse aanval van juli 1916 het dichtst bij Verdun kwam, ≈ 5 km van de stad. <a class="ref" href="#bron-20">[20]</a></p><div class="links"><a class="lk kaart" href="kaart.html#p=lion">🗺 Op de kaart</a><a class="lk sim" href="simulatie.html#souville">▶ In de simulatie</a><a class="lk tl" href="tijdlijn.html#e-1916-07-12">📜 Tijdlijn</a></div></article>
+<article class="st" id="w7"><h3><span class="n">#7</span> Leegbloeden? <span class="tg om">⚖️ Omstreden</span></h3><p>Falkenhayn schreef na de oorlog dat hij het Franse leger wilde laten ‘leegbloeden’. Het memo waarin hij dat in 1915 zou hebben gezegd, is nooit gevonden. Veel historici denken dat hij het pas achteraf zo bracht. <a class="ref" href="#bron-18">[18]</a></p><div class="links"><a class="lk sim" href="simulatie.html#gericht">▶ In de simulatie</a><a class="lk tl" href="tijdlijn.html#e-1916-02-21">📜 Tijdlijn</a></div></article>
+<article class="st" id="w8"><h3><span class="n">#8</span> Elke minuut een dode? <span class="tg om">⚖️ Omstreden</span></h3><p>Met ≈ 300.000 doden in ≈ 300 dagen sneuvelde er bij Verdun gemiddeld ≈ 1.000 man per dag. De aantallen slachtoffers lopen per bron flink uiteen. <a class="ref" href="#bron-19">[19]</a></p><div class="links"><a class="lk sim" href="simulatie.html#dec1916">▶ In de simulatie</a><a class="lk tl" href="tijdlijn.html#e-1916-12-15">📜 Tijdlijn</a></div></article>
+
+</section>
+<section class="grp" id="g-plek"><h2>Plekken</h2>
+<article class="st" id="w9"><h3><span class="n">#9</span> Een berg beenderen</h3><p>Door de kleine raampjes aan de achterkant van het Ossuarium zie je de beenderen van ≈ 130.000 onbekende Franse en Duitse soldaten. <a class="ref" href="#bron-5">[5]</a></p><div class="links"><a class="lk kaart" href="kaart.html#p=ossuaire">🗺 Op de kaart</a></div></article>
+<article class="st" id="w10"><h3><span class="n">#10</span> Dorpen met een burgemeester, maar zonder inwoners</h3><p>Zes van de negen verwoeste dorpen werden nooit herbouwd. Ze bestaan nog officieel, met een door de prefect benoemde burgemeester. Waar huizen stonden, staan nu paaltjes met de namen van de bewoners en hun beroep. <a class="ref" href="#bron-7">[7]</a></p><div class="links"><a class="lk kaart" href="kaart.html#p=fleury">🗺 Op de kaart</a></div></article>
+<article class="st" id="w11"><h3><span class="n">#11</span> De Place à Gaz</h3><p>Na de oorlog werden in het bos bij Ornes ≈ 200.000 gasgranaten verbrand. Daar groeit nog bijna niets: de grond zit vol arseen en zware metalen. Het terrein is afgesloten. <a class="ref" href="#bron-6">[6]</a></p></article>
+<article class="st" id="w12"><h3><span class="n">#12</span> Kraters van een dorp</h3><p>Van het dorp Vauquois is niets over dan een rij mijnkraters, van ≈ 519 ontploffingen in drie jaar. <a class="ref" href="#bron-15">[15]</a></p><div class="links"><a class="lk kaart" href="kaart.html#p=vauquois">🗺 Op de kaart</a><a class="lk sim" href="simulatie.html#mijnen1915">▶ In de simulatie</a><a class="lk tl" href="tijdlijn.html#e-1915-02-17">📜 Tijdlijn</a></div></article>
+<article class="st" id="w13"><h3><span class="n">#13</span> De Mort-Homme heette al zo <span class="tg lg">🧚 Legende</span></h3><p>De naam ‘Dode Man’ lijkt over 1916 te gaan, maar staat al op kaarten van ver vóór de oorlog. Waar hij vandaan komt, weet niemand zeker. <a class="ref" href="#bron-12">[12]</a></p><div class="links"><a class="lk kaart" href="kaart.html#p=mortHomme">🗺 Op de kaart</a><a class="lk sim" href="simulatie.html#morthomme">▶ In de simulatie</a><a class="lk tl" href="tijdlijn.html#e-1916-03-06">📜 Tijdlijn</a></div></article>
+
+</section>
+<section class="grp" id="g-amerikanen"><h2>De Amerikanen</h2>
+<article class="st" id="w14"><h3><span class="n">#14</span> 132 gevangenen <span class="tg om">⚖️ Omstreden</span></h3><p>Korporaal Alvin York nam op 8 oktober 1918 met een klein groepje 132 Duitsers gevangen. Waar het precies gebeurde, is nog steeds onderwerp van onderzoek: twee onderzoeksteams wijzen andere plekken aan. <a class="ref" href="#bron-8">[8]</a></p><div class="links"><a class="lk kaart" href="kaart.html#p=york">🗺 Op de kaart</a><a class="lk sim" href="simulatie.html#meuseargonne">▶ In de simulatie</a><a class="lk tl" href="tijdlijn.html#e-1918-09-26">📜 Tijdlijn</a></div></article>
+<article class="st" id="w15"><h3><span class="n">#15</span> De grootste Amerikaanse begraafplaats in Europa</h3><p>Op de Meuse-Argonne American Cemetery in Romagne liggen 14.246 militairen, meer dan op welke Amerikaanse militaire begraafplaats in Europa ook. <a class="ref" href="#bron-17">[17]</a></p><div class="links"><a class="lk kaart" href="kaart.html#p=meuseargonne">🗺 Op de kaart</a><a class="lk sim" href="simulatie.html#meuseargonne">▶ In de simulatie</a><a class="lk tl" href="tijdlijn.html#e-1918-09-26">📜 Tijdlijn</a></div></article>
+<article class="st" id="w16"><h3><span class="n">#16</span> Een zuil op de heuvel</h3><p>Het Amerikaanse monument van Montfaucon is een zuil van ≈ 60 m op de heuvel waar de Duitse kroonprins een uitkijkpost had. Je kunt naar boven klimmen. <a class="ref" href="#bron-16">[16]</a></p><div class="links"><a class="lk kaart" href="kaart.html#p=montfaucon">🗺 Op de kaart</a><a class="lk sim" href="simulatie.html#meuseargonne">▶ In de simulatie</a><a class="lk tl" href="tijdlijn.html#e-1918-09-26">📜 Tijdlijn</a></div></article>
+<article class="st" id="w17"><h3><span class="n">#17</span> Whiskey en Soda</h3><p>De Amerikaanse vrijwilligers van de Escadrille Lafayette hadden twee leeuwenwelpjes als mascotte: Whiskey en Soda. <a class="ref" href="#bron-10">[10]</a></p></article>
+
+</section>
+<section class="grp" id="g-meer"><h2>En verder</h2>
+<article class="st" id="w18"><h3><span class="n">#18</span> De Onbekende Soldaat werd in Verdun gekozen</h3><p>Op 10 november 1920 koos soldaat Auguste Thin in de citadel van Verdun een van acht kisten. Hij koos de zesde: de cijfers van zijn regiment, het 132e, tellen op tot 6. Die kist ligt onder de Arc de Triomphe in Parijs. <a class="ref" href="#bron-9">[9]</a></p><div class="links"><a class="lk kaart" href="kaart.html#p=citadelle">🗺 Op de kaart</a></div></article>
+<article class="st" id="w19"><h3><span class="n">#19</span> De kroonprins in Nederland</h3><p>Kroonprins Wilhelm, die het Duitse leger bij Verdun aanvoerde, woonde na de oorlog tot 1923 in ballingschap op het eiland Wieringen in Noord-Holland. <a class="ref" href="#bron-11">[11]</a></p><div class="links"><a class="lk kaart" href="kaart.html#p=kronprinz">🗺 Op de kaart</a><a class="lk sim" href="simulatie.html#gericht">▶ In de simulatie</a><a class="lk tl" href="tijdlijn.html#e-1916-02-21">📜 Tijdlijn</a></div></article>
+<article class="st" id="w20"><h3><span class="n">#20</span> Verdun deelde Europa al eens</h3><p>In 843 verdeelden de kleinzonen van Karel de Grote in het Verdrag van Verdun het rijk in drie delen. Daaruit groeiden later Frankrijk en Duitsland. <a class="ref" href="#bron-13">[13]</a></p></article>
+<article class="st" id="w21"><h3><span class="n">#21</span> Suikeramandelen</h3><p>Verdun is al sinds de middeleeuwen bekend om zijn dragées, suikeramandelen. Ze worden er nog steeds gemaakt. <a class="ref" href="#bron-14">[14]</a></p></article>
+
+</section>
+<section class="grp" id="bronnen"><h2>Bronnen</h2><ol class="bronnen"><li id="bron-1">Wikipedia (fr), Fort de Douaumont – <a href="https://fr.wikipedia.org/wiki/Fort_de_Douaumont" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Fort_de_Douaumont</a></li><li id="bron-2">Wikipedia (fr), Pigeons voyageurs de l’armée française pendant la Première Guerre mondiale – <a href="https://fr.wikipedia.org/wiki/Pigeons_voyageurs_de_l%27arm%C3%A9e_fran%C3%A7aise_pendant_la_Premi%C3%A8re_Guerre_mondiale" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Pigeons_voyageurs_de_l%27arm%C3%A9e_fran%C3%A7ai</a></li><li id="bron-3">Wikipedia (fr), Tranchée des Baïonnettes – <a href="https://fr.wikipedia.org/wiki/Tranch%C3%A9e_des_Ba%C3%AFonnettes" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Tranch%C3%A9e_des_Ba%C3%AFonnettes</a></li><li id="bron-4">Wikipedia (fr), Fleury-devant-Douaumont – <a href="https://fr.wikipedia.org/wiki/Fleury-devant-Douaumont" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Fleury-devant-Douaumont</a></li><li id="bron-5">Wikipedia (fr), Ossuaire de Douaumont – <a href="https://fr.wikipedia.org/wiki/Ossuaire_de_Douaumont" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Ossuaire_de_Douaumont</a></li><li id="bron-6">Bausinger e.a. (2007), Exposure assessment of a burning ground for chemical ammunition on the Great War battlefields of Verdun, Sci. Total Environ. – <a href="https://doi.org/10.1016/j.scitotenv.2007.03.006" target="_blank" rel="noopener">doi.org/10.1016/j.scitotenv.2007.03.006</a></li><li id="bron-7">Wikipedia (fr), Villages français détruits durant la Première Guerre mondiale – <a href="https://fr.wikipedia.org/wiki/Villages_fran%C3%A7ais_d%C3%A9truits_durant_la_Premi%C3%A8re_Guerre_mondiale" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Villages_fran%C3%A7ais_d%C3%A9truits_durant_la_P</a></li><li id="bron-8">Wikipedia (en), Alvin York – <a href="https://en.wikipedia.org/wiki/Alvin_York" target="_blank" rel="noopener">en.wikipedia.org/wiki/Alvin_York</a></li><li id="bron-9">Wikipedia (en), Tomb of the Unknown Soldier (France) – <a href="https://en.wikipedia.org/wiki/Tomb_of_the_Unknown_Soldier_(France)" target="_blank" rel="noopener">en.wikipedia.org/wiki/Tomb_of_the_Unknown_Soldier_(France)</a></li><li id="bron-10">Wikipedia (en), Lafayette Escadrille – <a href="https://en.wikipedia.org/wiki/Lafayette_Escadrille" target="_blank" rel="noopener">en.wikipedia.org/wiki/Lafayette_Escadrille</a></li><li id="bron-11">Wikipedia (en), Wilhelm, German Crown Prince – <a href="https://en.wikipedia.org/wiki/Wilhelm,_German_Crown_Prince" target="_blank" rel="noopener">en.wikipedia.org/wiki/Wilhelm,_German_Crown_Prince</a></li><li id="bron-12">Wikipedia (fr), Mort-Homme – <a href="https://fr.wikipedia.org/wiki/Mort-Homme" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Mort-Homme</a></li><li id="bron-13">Wikipedia (en), Treaty of Verdun – <a href="https://en.wikipedia.org/wiki/Treaty_of_Verdun" target="_blank" rel="noopener">en.wikipedia.org/wiki/Treaty_of_Verdun</a></li><li id="bron-14">Wikipedia (fr), Dragée – <a href="https://fr.wikipedia.org/wiki/Drag%C3%A9e" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Drag%C3%A9e</a></li><li id="bron-15">Wikipedia (fr), Butte de Vauquois – <a href="https://fr.wikipedia.org/wiki/Butte_de_Vauquois" target="_blank" rel="noopener">fr.wikipedia.org/wiki/Butte_de_Vauquois</a></li><li id="bron-16">ABMC, Montfaucon American Monument – <a href="https://www.abmc.gov/cemeteries-memorials/europe/montfaucon-american-monument" target="_blank" rel="noopener">www.abmc.gov/cemeteries-memorials/europe/montfaucon-american-monument</a></li><li id="bron-17">ABMC, Meuse-Argonne American Cemetery – <a href="https://www.abmc.gov/cemeteries-memorials/europe/meuse-argonne-american-cemetery" target="_blank" rel="noopener">www.abmc.gov/cemeteries-memorials/europe/meuse-argonne-american-cemete</a></li><li id="bron-18">Wikipedia (en), Erich von Falkenhayn – <a href="https://en.wikipedia.org/wiki/Erich_von_Falkenhayn" target="_blank" rel="noopener">en.wikipedia.org/wiki/Erich_von_Falkenhayn</a></li><li id="bron-19">Wikipedia (en), Battle of Verdun – <a href="https://en.wikipedia.org/wiki/Battle_of_Verdun" target="_blank" rel="noopener">en.wikipedia.org/wiki/Battle_of_Verdun</a></li><li id="bron-20">HMdb – Monument du Lion de Souville – <a href="https://www.hmdb.org/m.asp?m=265660" target="_blank" rel="noopener">www.hmdb.org/m.asp?m=265660</a></li></ol></section>
+</main>
+<footer>Verdun 14–18 · bezoekersgids · <a href="index.html">menu</a> · <a href="https://github.com/RvWest67/verdun-loopgravenkaart#readme">bronnen en licenties</a></footer>
+
+</body>
+</html>

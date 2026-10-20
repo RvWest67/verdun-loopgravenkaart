@@ -1,10 +1,10 @@
 /* Service worker Verdun 14–18 – offline gebruik.
    Versie wordt bij elke build automatisch afgeleid uit de inhoud van de bestanden. */
-const VERSION = 'e55ed80b71';
+const VERSION = '688a27a7fd';
 const PAGES = 'verdun-pages-' + VERSION;
 const TILES = 'verdun-tiles';          // alleen bekeken OSM-tegels, geen bulk-download
 const MAX_TILES = 2500;
-const FILES = ["./", "index.html", "begrippen.html", "kaart.html", "praktisch.html", "programma.html", "simulatie.html", "tijdlijn.html", "verhalen.html", "wapens.html", "wistjedat.html", "gmroute.js", "icon-maskable.svg", "icon.svg", "manifest.webmanifest", "popsheet.js", "qr.svg", "img/driant.svg", "img/falkenhayn.svg", "img/genevoix.svg", "img/kronprinz.svg", "img/maginot.svg", "img/mangin.svg", "img/nivelle.svg", "img/pershing.svg", "img/petain.svg", "img/raynal.svg", "img/vaux1920.svg", "img/york.svg", "vendor/leaflet-rotate/leaflet-rotate.js", "vendor/leaflet/leaflet.css", "vendor/leaflet/leaflet.js"];
+const FILES = ["./", "index.html", "begrippen.html", "kaart.html", "praktisch.html", "programma.html", "simulatie.html", "tijdlijn.html", "verhalen.html", "wapens.html", "wistjedat.html", "gmroute.js", "icon-maskable.svg", "icon.svg", "manifest.webmanifest", "overblijfselen.js", "overblijfselen.json", "popsheet.js", "qr.svg", "img/driant.svg", "img/falkenhayn.svg", "img/genevoix.svg", "img/kronprinz.svg", "img/maginot.svg", "img/mangin.svg", "img/nivelle.svg", "img/pershing.svg", "img/petain.svg", "img/raynal.svg", "img/vaux1920.svg", "img/york.svg", "vendor/leaflet-rotate/leaflet-rotate.js", "vendor/leaflet/leaflet.css", "vendor/leaflet/leaflet.js"];
 
 self.addEventListener('install', ev => {
   ev.waitUntil(caches.open(PAGES).then(c => c.addAll(FILES.map(u => new Request(u, {cache: 'reload'})))).then(() => self.skipWaiting()));

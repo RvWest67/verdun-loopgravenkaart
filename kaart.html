@@ -11,6 +11,7 @@
 <script>window.GMR_NO_AUTO=true;</script>
 <script src="gmroute.js"></script>
 <script src="popsheet.js"></script>
+<script src="overblijfselen.js"></script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%A0%3C/text%3E%3C/svg%3E">
 <style>
 :root{--bg:#fffdf7;--ink:#2b2b2b;--accent:#8b5a2b;--bar:#2c3442}
@@ -138,7 +139,10 @@ input[type=range]{width:100%}
   <h2>Lagen</h2>
   <label class="tog"><input type="checkbox" id="tgLidar"> 🏔️ Lidar (loopgraven en kraters zichtbaar)</label>
   <div class="note" id="lidarNote">Reliëf van de bodem onder de bomen: IGN LiDAR HD (0,5 m). Zoom in tot ≥ 15 om loopgraven en granaattrechters te zien. Alleen online. <span id="lidarOp">Sterkte <input type="range" id="lidarSl" min="30" max="100" step="5" value="100" aria-label="Sterkte lidar-laag" style="width:110px;vertical-align:middle"></span></div>
-  <label class="tog"><input type="checkbox" id="tgTrench" checked> Loopgraafresten (OpenStreetMap) <span class="note">(inzoomen)</span></label>
+  <label class="tog"><input type="checkbox" id="tgTrench" checked> Loopgraafresten (OpenStreetMap)</label>
+  <div class="note" id="trLeg"></div>
+  <label class="tog"><input type="checkbox" id="tgRem"> 🧱 Overblijfselen: bunkers, ruïnes, kraters (OSM)</label>
+  <div class="note" id="remLeg">WOI-resten uit OpenStreetMap: bunkers en schuilplaatsen, geschut- en observatieposten, kraters en slagveldlocaties, ruïnes. Wordt geladen als je de laag aanzet.</div>
   <label class="tog"><input type="checkbox" id="tgZone" checked> <span class="legend-box" style="border-color:#c92a2a;background:rgba(201,42,42,.15)"></span>Zone rouge, kern (≈)</label>
   <label class="tog"><input type="checkbox" id="tgGev"> 💣 Gevaar &amp; munitie</label>
   <div class="note"><b>Veiligheid:</b> raak nooit munitie aan, blijf op de paden, betreed geen afgezette terreinen. Munitie gezien? Afstand houden en bellen: <b>112</b> (of 17, gendarmerie).</div>
@@ -159,6 +163,7 @@ input[type=range]{width:100%}
   <ul>
    <li><b>Frontlijnen (≈):</b> er is geen open, gegeorefereerde dataset van de frontlijnen rond Verdun. Ik heb de vijf momenten schematisch getekend: de lijnen lopen langs plaatsen die in de bronnen genoemd worden (coördinaten uit OpenStreetMap), met rechte stukken ertussen. Bronnen: <a href="https://en.wikipedia.org/wiki/Battle_of_Verdun" target="_blank" rel="noopener">Wikipedia – Battle of Verdun</a> (met kaarten van de United States Military Academy, West Point Atlas, publiek domein), <a href="https://fr.wikipedia.org/wiki/Bataille_de_Verdun" target="_blank" rel="noopener">Wikipedia (fr) – Bataille de Verdun</a>, <a href="https://en.wikipedia.org/wiki/Battle_of_Saint-Mihiel" target="_blank" rel="noopener">Battle of Saint-Mihiel</a>, <a href="https://en.wikipedia.org/wiki/Meuse%E2%80%93Argonne_offensive" target="_blank" rel="noopener">Meuse-Argonne offensive</a>, en de Michelin-slagveldgidsen ‘Verdun’ en ‘Saint-Mihiel’ (1919, publiek domein).</li>
    <li><b>Zone rouge (≈):</b> na de oorlog werd ≈ 1.200 km² in Frankrijk ongeschikt verklaard voor bewoning en landbouw. Rond Verdun werd het grootste deel bebost (nu staatsbos). Het rode vlak toont <b>schematisch</b> de kern op de rechteroever; het bos van de Mort-Homme is de echte bosgrens uit OpenStreetMap. Bron: <a href="https://en.wikipedia.org/wiki/Zone_rouge" target="_blank" rel="noopener">Wikipedia – Zone rouge</a>.</li>
+   <li><b>Overblijfselen</b>: OpenStreetMap (© OpenStreetMap-bijdragers, <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">ODbL 1.0</a>), opgehaald via de Overpass API op 20-10-2026: military=bunker/shelter/blockhouse/casemate/gun_emplacement/observation_post, historic=bunker/ruins/battlefield/archaeological_site/crater/fort, bunker_type en natural=crater. Gefilterd: niets uit WO II of later (datums na 1919, ‘WWII’ e.d.), geen menhirs, mottes of middeleeuwse ruïnes, ruïnes alleen met een WOI-aanwijzing (naam, beschrijving of tag), geen herdenkingsmonumenten en geen dubbels van de plekken op deze kaart. Niet elk object is ter plaatse gecontroleerd; blijf op de paden.</li>
    <li><b>Loopgraafresten:</b> lijnen die OSM-vrijwilligers als <i>military=trench</i> hebben ingetekend (© OpenStreetMap-bijdragers, ODbL). Dit is geen volledig beeld: het bos staat vol sporen die niet in OSM staan.</li>
    <li>Openingstijden en prijzen: nagekeken op de officiële sites in oktober 2026. Check ze vlak voor je bezoek nog eens.</li>
   </ul>
@@ -242,7 +247,6 @@ YEARS.forEach(y=>{
 vPane('trench'); map.getPane('trench').style.zIndex = 410;
 const trench = L.geoJSON(TRENCH, {pane:'trench', style:()=>({color:'#5c3d2e', weight:2, opacity:.85}),
   onEachFeature:(f,l)=>l.bindPopup('<b>Loopgraafrest</b>'+(f.properties.r?' (ruïne)':'')+'<br>Ingetekend in OpenStreetMap (military=trench). Zet de lidar-laag aan om het echte reliëf te zien.<br><span class="note">© OpenStreetMap-bijdragers, ODbL. Blijf op de paden.</span>',{noRoute:true})});
-function updTrench(){ const on=document.getElementById('tgTrench').checked && map.getZoom()>=13; on?trench.addTo(map):map.removeLayer(trench); }
 
 // ---- POIs ----
 const ICONS = {
@@ -296,7 +300,11 @@ bindToggle('tgZone', zone); bindToggle('tgGev', gev);
   sl.oninput = () => lidar.setOpacity(sl.value / 100);
   window.showLidar = () => { if (!tg.checked) { tg.checked = true; lidar.addTo(map); } if (map.getZoom() < 16) map.setZoom(16); };
   if (/(^#|&)lidar\b/.test(location.hash)) { tg.checked = true; lidar.addTo(map); } }
-document.getElementById('tgTrench').onchange=updTrench; map.on('zoomend', updTrench); updTrench();
+// loopgraven: uitgezoomd één icoon per plek (segmenten binnen 300 m), vanaf zoom 15 de lijnen zelf
+REMAINS.trenches(map, {layer:trench, toggle:'tgTrench', showAt:15, legend:'trLeg', sites:POIS, src:'© OpenStreetMap-bijdragers (ODbL), military=trench'});
+// overblijfselen (OSM, ODbL)
+REMAINS.init(map, {url:'overblijfselen.json', toggle:'tgRem', legend:'remLeg', pane:'remM'});
+if (/(^#|&)rem\b/.test(location.hash)) map.setZoom(Math.max(map.getZoom(), 12));
 if (/^#(gevaar|zone)/.test(location.hash)) { const t=document.getElementById('tgGev'); t.checked=true; t.onchange(); }
 document.querySelectorAll('#baseRow .chip').forEach(c=>c.onclick=()=>{
   map.removeLayer(curBase); curBase = bases[c.dataset.base].addTo(map); curBase.bringToBack();

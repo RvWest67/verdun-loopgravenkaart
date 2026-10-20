@@ -184,7 +184,10 @@ if (/^#[\d.]+,[\d.]+,\d+$/.test(location.hash)) { const a=location.hash.slice(1)
 const map = L.map('map', {zoomControl:false, rotate:true, bearing:0, rotateControl:false, touchRotate:false, shiftKeyRotate:false, compassBearing:false}).setView(startView[0], startView[1]);
 function vPane(n){ return map.createPane(n, map.getPane('rotatePane')||undefined); }
 if (/^#[\d.]+,[\d.]+,\d+$/.test(location.hash)) { L.circleMarker(startView[0],{radius:14,color:'#c92a2a',weight:3,fillColor:'#c92a2a',fillOpacity:.15,interactive:false}).addTo(map); }
-L.control.zoom({position:'bottomright'}).addTo(map);
+const zoomCtl = L.control.zoom({position:'bottomright'}).addTo(map);
+// laptop/desktop (≥ 800 px): het lagenpaneel ligt rechts over de hoek, dus zoomknoppen linksboven; telefoon: rechtsonder (ongewijzigd)
+{ const mq = matchMedia('(min-width:800px)'), f = () => zoomCtl.setPosition(mq.matches ? 'topleft' : 'bottomright');
+  mq.addEventListener ? mq.addEventListener('change', f) : mq.addListener(f); f(); }
 map.attributionControl.setPrefix('<a href="https://leafletjs.com" target="_blank" rel="noopener">Leaflet</a>');
 L.control.scale({imperial:false, position:'bottomleft'}).addTo(map);
 const bases = {

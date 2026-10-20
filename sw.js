@@ -1,6 +1,6 @@
 /* Service worker Verdun 14–18 – offline gebruik.
    Versie wordt bij elke build automatisch afgeleid uit de inhoud van de bestanden. */
-const VERSION = '1476050853';
+const VERSION = 'e55ed80b71';
 const PAGES = 'verdun-pages-' + VERSION;
 const TILES = 'verdun-tiles';          // alleen bekeken OSM-tegels, geen bulk-download
 const MAX_TILES = 2500;
